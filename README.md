@@ -1,2 +1,2 @@
 # HandsOn-MiniChallenge
-1 MiniChallenge do Centro iOS
+1 - MiniChallenge do Centro iOS
