@@ -11,11 +11,11 @@
 @interface Usuario : NSObject
 
 @property (nonatomic) int id_usuario;
-@property (nonatomic) NSString *nome;
+@property (nonatomic) NSString *nomeUsuario;
 @property (nonatomic) NSString *email;
-@property (nonatomic) int id_usuario;
-@property (nonatomic) int id_usuario;
-@property (nonatomic) int id_usuario;
+@property (nonatomic) NSString *senha;
+@property (nonatomic) NSString *curso;
+@property (nonatomic) NSString *interesse;
 
 
 @end
