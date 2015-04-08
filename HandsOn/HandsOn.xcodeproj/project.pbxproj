@@ -14,6 +14,7 @@
 		DB1AF1561AD46C04003F0283 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1AF1551AD46C04003F0283 /* Images.xcassets */; };
 		DB1AF1591AD46C04003F0283 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB1AF1571AD46C04003F0283 /* LaunchScreen.xib */; };
 		DB1AF1651AD46C05003F0283 /* HandsOnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1AF1641AD46C05003F0283 /* HandsOnTests.m */; };
+		DBE824601AD59C7C006065D4 /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE8245F1AD59C7C006065D4 /* Usuario.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		DB1AF15E1AD46C05003F0283 /* HandsOnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandsOnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1AF1631AD46C05003F0283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB1AF1641AD46C05003F0283 /* HandsOnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandsOnTests.m; sourceTree = "<group>"; };
+		DBE8245E1AD59C7C006065D4 /* Usuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Usuario.h; sourceTree = "<group>"; };
+		DBE8245F1AD59C7C006065D4 /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Usuario.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 		DB1AF16E1AD46F3D003F0283 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DBE8245E1AD59C7C006065D4 /* Usuario.h */,
+				DBE8245F1AD59C7C006065D4 /* Usuario.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE824601AD59C7C006065D4 /* Usuario.m in Sources */,
 				DB1AF1511AD46C04003F0283 /* ViewController.m in Sources */,
 				DB1AF14E1AD46C04003F0283 /* AppDelegate.m in Sources */,
 				DB1AF14B1AD46C04003F0283 /* main.m in Sources */,
@@ -420,6 +426,7 @@
 				DB1AF16A1AD46C05003F0283 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB1AF16B1AD46C05003F0283 /* Build configuration list for PBXNativeTarget "HandsOnTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +435,7 @@
 				DB1AF16D1AD46C05003F0283 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
