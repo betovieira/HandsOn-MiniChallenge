@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A05F43611AD5A88B00903CD0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05F43601AD5A88B00903CD0 /* LoginViewController.m */; };
 		A0B8D4DE1AD59F4000E0A8D7 /* Area.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B8D4DD1AD59F4000E0A8D7 /* Area.m */; };
 		A0B8D4E11AD59FA600E0A8D7 /* Problema.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B8D4E01AD59FA600E0A8D7 /* Problema.m */; };
 		A0B8D4E41AD5A08000E0A8D7 /* Solucao.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B8D4E31AD5A08000E0A8D7 /* Solucao.m */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A05F435F1AD5A88B00903CD0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A05F43601AD5A88B00903CD0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		A0B8D4DC1AD59F4000E0A8D7 /* Area.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Area.h; sourceTree = "<group>"; };
 		A0B8D4DD1AD59F4000E0A8D7 /* Area.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Area.m; sourceTree = "<group>"; };
 		A0B8D4DF1AD59FA600E0A8D7 /* Problema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Problema.h; sourceTree = "<group>"; };
@@ -75,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A05F435E1AD5A86D00903CD0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A05F435F1AD5A88B00903CD0 /* LoginViewController.h */,
+				A05F43601AD5A88B00903CD0 /* LoginViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		DB1AF13C1AD46C04003F0283 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +108,7 @@
 		DB1AF1471AD46C04003F0283 /* HandsOn */ = {
 			isa = PBXGroup;
 			children = (
+				A05F435E1AD5A86D00903CD0 /* Views */,
 				DB1AF16E1AD46F3D003F0283 /* Classes */,
 				DB1AF14C1AD46C04003F0283 /* AppDelegate.h */,
 				DB1AF14D1AD46C04003F0283 /* AppDelegate.m */,
@@ -257,6 +270,7 @@
 				DBE824601AD59C7C006065D4 /* Usuario.m in Sources */,
 				DB1AF1511AD46C04003F0283 /* ViewController.m in Sources */,
 				A0B8D4E11AD59FA600E0A8D7 /* Problema.m in Sources */,
+				A05F43611AD5A88B00903CD0 /* LoginViewController.m in Sources */,
 				A0B8D4E41AD5A08000E0A8D7 /* Solucao.m in Sources */,
 				DB1AF14E1AD46C04003F0283 /* AppDelegate.m in Sources */,
 				DB1AF14B1AD46C04003F0283 /* main.m in Sources */,
@@ -384,6 +398,7 @@
 				INFOPLIST_FILE = HandsOn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -394,6 +409,7 @@
 				INFOPLIST_FILE = HandsOn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
