@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Area.h"
 
 @interface Solucao : NSObject
 
@@ -16,5 +17,12 @@
 @property (nonatomic) NSString *caminhoAnexoSolucao;
 @property (nonatomic) NSString *interesses;
 @property (nonatomic) int curtidasSolucao;
+
++(NSMutableArray *) retornaSolucoes;
++(NSMutableArray *) retornaSolucoesPorID: (Solucao *)s;
++(NSMutableArray *) retornaSolucoesPorArea: (Area *)a;
++(NSMutableArray *) retornaSolucoesCurtidas;
++(NSMutableArray *) retornaQuantidadeImplementacoes: (Solucao *)s;
++(NSMutableArray *) retornaImplementacoesPorSolucao: (Solucao *)s;
 
 @end

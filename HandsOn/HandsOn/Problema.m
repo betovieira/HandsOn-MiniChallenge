@@ -10,9 +10,39 @@
 
 @implementation Problema
 
-+ (NSMutableArray *) retornaProblemas: (Area *)a
+
++ (NSMutableArray *) retornaProblemasTodos
 {
-    NSMutableArray *listaProblemas = [[NSMutableArray alloc] init];
+    NSMutableArray *listaProblemasTodos = [[NSMutableArray alloc] init];
+    
+    NSString *string = [NSString stringWithFormat:@"http://betovieira.com.br/handson/retornadados.php?tipo_operacao=4"];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:string]];
+    
+    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSArray *separaObjetos = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
+    
+    NSDictionary *separaAtributos;
+    
+    for (int i = 0; i < separaObjetos.count; i++) {
+        separaAtributos = [separaObjetos objectAtIndex:i];
+        
+        Problema *p = [[Problema alloc] init];
+        p.id_problema = [[separaAtributos objectForKey:@"id_problema"] intValue];
+        p.id_usuario = [[separaAtributos objectForKey:@"id_usuario"] intValue];
+        p.id_area = [[separaAtributos objectForKey:@"id_area"] intValue];
+        p.descricaoProblema = [separaAtributos objectForKey:@"descricaoProblema"];
+        p.curtidasProblema = [[separaAtributos objectForKey:@"curtidasProblema"] intValue];
+        
+        [listaProblemasTodos addObject:p];
+    }
+    
+    return listaProblemasTodos;
+}
+
++ (NSMutableArray *) retornaProblemasArea: (Area *)a
+{
+    NSMutableArray *listaProblemasArea = [[NSMutableArray alloc] init];
     
     NSString *string = [NSString stringWithFormat:@"http://betovieira.com.br/handson/retornadados.php?tipo_operacao=5&id_area=%d", a.id_area];
     
@@ -33,10 +63,99 @@
         p.descricaoProblema = [separaAtributos objectForKey:@"descricaoProblema"];
         p.curtidasProblema = [[separaAtributos objectForKey:@"curtidasProblema"] intValue];
         
-        [listaProblemas addObject:p];
+        [listaProblemasArea addObject:p];
     }
     
-    return listaProblemas;
+    return listaProblemasArea;
+}
+
+
+
++ (NSMutableArray *) retornaProblemasCurtidos
+{
+    NSMutableArray *listaProblemasCurtidos = [[NSMutableArray alloc] init];
+    
+    NSString *string = [NSString stringWithFormat:@"http://betovieira.com.br/handson/retornadados.php?tipo_operacao=7"];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:string]];
+    
+    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSArray *separaObjetos = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
+    
+    NSDictionary *separaAtributos;
+    
+    for (int i = 0; i < separaObjetos.count; i++) {
+        separaAtributos = [separaObjetos objectAtIndex:i];
+        
+        Problema *p = [[Problema alloc] init];
+        p.id_problema = [[separaAtributos objectForKey:@"id_problema"] intValue];
+        p.id_usuario = [[separaAtributos objectForKey:@"id_usuario"] intValue];
+        p.id_area = [[separaAtributos objectForKey:@"id_area"] intValue];
+        p.descricaoProblema = [separaAtributos objectForKey:@"descricaoProblema"];
+        p.curtidasProblema = [[separaAtributos objectForKey:@"curtidasProblema"] intValue];
+        
+        [listaProblemasCurtidos addObject:p];
+    }
+    
+    return listaProblemasCurtidos;
+}
+
++ (NSMutableArray *) retornaQuantidadeDeSolucoes: (Problema *)r;
+{
+    NSMutableArray *listaQuantidadeCurtidas = [[NSMutableArray alloc] init];
+    
+    NSString *string = [NSString stringWithFormat:@"http://betovieira.com.br/handson/retornadados.php?tipo_operacao=8&id_problema=%d", r.id_problema];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:string]];
+    
+    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSArray *separaObjetos = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
+    
+    NSDictionary *separaAtributos;
+    
+    for (int i = 0; i < separaObjetos.count; i++) {
+        separaAtributos = [separaObjetos objectAtIndex:i];
+        
+        Problema *p = [[Problema alloc] init];
+        p.id_problema = [[separaAtributos objectForKey:@"id_problema"] intValue];
+        p.id_usuario = [[separaAtributos objectForKey:@"id_usuario"] intValue];
+        p.id_area = [[separaAtributos objectForKey:@"id_area"] intValue];
+        p.descricaoProblema = [separaAtributos objectForKey:@"descricaoProblema"];
+        p.curtidasProblema = [[separaAtributos objectForKey:@"curtidasProblema"] intValue];
+        
+        [listaQuantidadeCurtidas addObject:p];
+    }
+    
+    return listaQuantidadeCurtidas;
+}
+
++ (NSMutableArray *) retornaSolucoesPorProblema:(Problema *)r;
+{
+    NSMutableArray *listaTodasSolucoes = [[NSMutableArray alloc] init];
+    
+    NSString *string = [NSString stringWithFormat:@"http://betovieira.com.br/handson/retornadados.php?tipo_operacao=8&id_problema=%d", r.id_problema];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:string]];
+    
+    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSArray *separaObjetos = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
+    
+    NSDictionary *separaAtributos;
+    
+    for (int i = 0; i < separaObjetos.count; i++) {
+        separaAtributos = [separaObjetos objectAtIndex:i];
+        
+        Problema *p = [[Problema alloc] init];
+        p.id_problema = [[separaAtributos objectForKey:@"id_problema"] intValue];
+        p.id_usuario = [[separaAtributos objectForKey:@"id_usuario"] intValue];
+        p.id_area = [[separaAtributos objectForKey:@"id_area"] intValue];
+        p.descricaoProblema = [separaAtributos objectForKey:@"descricaoProblema"];
+        p.curtidasProblema = [[separaAtributos objectForKey:@"curtidasProblema"] intValue];
+        
+        [listaTodasSolucoes addObject:p];
+    }
+    
+    return listaTodasSolucoes;
 }
 
 @end

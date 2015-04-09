@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Area.h"
 
 @interface Implementacao : NSObject
 
@@ -18,5 +19,10 @@
 @property (nonatomic) NSString *caminhoAnexoImplementacao;
 @property (nonatomic) NSString *tags;
 @property (nonatomic) int curtidasImplementacao;
+
+
++(NSMutableArray *) retornaImplementacoes;
++(NSMutableArray *) retornaImplementacoesPorArea: (Area *)a;
++(NSMutableArray *) retornaImplementacoesCurtidas;
 
 @end
