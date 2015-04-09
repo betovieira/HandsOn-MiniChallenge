@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Area.h"
 
 @interface Problema : NSObject
 
@@ -15,5 +16,7 @@
 @property (nonatomic) int id_area;
 @property (nonatomic) NSString *descricaoProblema;
 @property (nonatomic) int curtidasProblema;
+
++ (NSMutableArray *) retornaProblemas: (Area *)a;
 
 @end

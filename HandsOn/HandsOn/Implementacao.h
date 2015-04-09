@@ -13,6 +13,7 @@
 @property (nonatomic) int id_implementacao;
 @property (nonatomic) int id_solucao;
 @property (nonatomic) int id_usuario;
+@property (nonatomic) int id_area;
 @property (nonatomic) NSString *descricaoImplementacao;
 @property (nonatomic) NSString *caminhoAnexoImplementacao;
 @property (nonatomic) NSString *tags;
