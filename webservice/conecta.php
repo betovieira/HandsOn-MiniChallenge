@@ -5,9 +5,9 @@
 */
 
 	$hostname = "mysql.hostinger.com.br";
-	$username = "u428842902_beto";
-	$password = "Z4Dj2ygmmm";
-	$database = "u428842902_login";
+	$username = "u428842902_hands";
+	$password = "GtPPotnT7v";
+	$database = "u428842902_hands";
 
 	$con = mysqli_connect($hostname, $username, $password);
 	mysqli_select_db($con, $database) or 

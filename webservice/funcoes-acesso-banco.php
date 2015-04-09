@@ -26,9 +26,9 @@
 	function insertMySQL($command){
 		include 'conecta.php';
 
-		$result_query = mysqli_query($con, $command) or die (mysqli_error());
+		$result_query = mysqli_query($con, $command) or die (mysqli_error($con));
 
-		mysql_close($con);
+		mysqli_close($con);
 		
 		return '[{"retorno":"'.json_encode($result_query).'"}]';
 	}

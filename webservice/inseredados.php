@@ -12,25 +12,27 @@
 		$curso = $_POST['curso'];
 		$interesses = $_POST['interesses'];
 
-		$command = "INSERT INTO `usuario`(`id_usuario`, `nome_usuario`, `email`, `senha`, `curso`, `interesses`) VALUES (null,'$nomeUsuario','$email','$senha','$curso','$interesses')";
+		$command = "INSERT INTO `usuario`(`id_usuario`, `nome_usuario`, `email`, `senha`, `curso`, `interesses`) VALUES (null,'".$nomeUsuario."','".$email."','".$senha."','".$curso."','".$interesses."')";
 
-		insertMySQL($command);
+		echo insertMySQL($command);
 	} 
 	/* Insere Problema */
 	else if($tipo_operacao == 2) {
 		$id_usuario = $_POST['id_usuario'];
 		$id_area = $_POST['id_area'];
 		$descricaoProblema = $_POST['descricaoProblema'];
-		$curtidasProblema = $_POST['curtidasProblema'];
 
-		$command = "INSERT INTO `problema`(`id_problema`, `id_usuario`, `id_area`, `descricaoProblema`, `curtidasProblema`) VALUES (null,$id_usuario,$id_area,'$descricaoProblema',$curtidasProblema)";
+		$command = "INSERT INTO `problema`(`id_problema`, `id_usuario`, `id_area`, `descricaoProblema`, `curtidasProblema`) VALUES (null,$id_usuario,$id_area,'$descricaoProblema',0)";
 
-		insertMySQL($command);
+		echo insertMySQL($command);
 	}
 	/* UPDATE - Insere curtida de um problema */
 	else if($tipo_operacao == 3)
 	{
+		$id_problema = $_POST['id_problema'];
 
+		$command = "UPDATE `problema` SET `curtidasProblema` = `curtidasProblema`+ 1 WHERE id_problema = $id_problema";
+		echo insertMySQL($command);
 	}
 	/* Insere soluções */
 	else if($tipo_operacao == 4)
@@ -38,17 +40,19 @@
 		$id_problema = $_POST['id_problema'];
 		$descricaoSolucao = $_POST['descricaoSolucao'];
 		$caminhoAnexoSolucao = $_POST['caminhoAnexoSolucao'];
-		$interesse = $_POST['interesse'];
-		$curtidasSolucao = $_POST['curtidasSolucao'];
+		$interesse = $_POST['interesse'];	
+		$id_area = $_POST['id_area']; 
 
-		$command = "INSERT INTO `solucao`(`id_solucao`, `id_problema`, `descricaoSolucao`, `caminhoAnexoSolucao`, `interesse`, `curtidasSolucao`) VALUES (null,$id_problema,'$descricaoSolucao', '$caminhoAnexoSolucao', '$interesse',$curtidasSolucao)";
-
-		insertMySQL($command);
+		$command = "INSERT INTO `solucao`(`id_solucao`, `id_problema`, `descricaoSolucao`, `caminhoAnexoSolucao`, `interesse`, `curtidasSolucao`, `id_area`) VALUES (null,$id_problema,'$descricaoSolucao','$caminhoAnexoSolucao','$interesse',0, $id_area)";
+		//echo $command;
+		echo insertMySQL($command);
 	} 
 	/* Insere curtida de uma solução */
 	else if($tipo_operacao == 5)
 	{
-
+		$id_solucao = $_POST['id_solucao'];
+		$command = "UPDATE `solucao` SET `curtidasSolucao` = `curtidasSolucao`+ 1 WHERE `id_solucao` = $id_solucao";
+		echo insertMySQL($command);
 	}
 	/* Insere implementação */
 	else if($tipo_operacao == 6)
@@ -58,15 +62,16 @@
 		$descricaoImplementacao = $_POST['descricaoImplementacao'];
 		$caminhoAnexoImplementacao = $_POST['caminhoAnexoImplementacao'];
 		$tags = $_POST['tags'];
-		$curtidasImplementacao = $_POST['curtidasImplementacao'];
 	
-		$command = "INSERT INTO `implementacao`(`id_implementacao`, `id_solucao`, `id_usuario`, `descricaoImplementacao`, `caminhoAnexoImplementacao`, `tags`, `curtidasImplementacao`) VALUES (null, $id_solucao, $id_usuario,'$descricaoImplementacao','$caminhoAnexoImplementacao','$tags',$curtidasImplementacao)"
-		insertMySQL($command);
+		$command = "INSERT INTO `implementacao`(`id_implementacao`, `id_solucao`, `id_usuario`, `descricaoImplementacao`, `caminhoAnexoImplementacao`, `tags`, `curtidasImplementacao`) VALUES (null, $id_solucao, $id_usuario,'$descricaoImplementacao','$caminhoAnexoImplementacao','$tags',0)";
+		echo insertMySQL($command);
 	}
 	/* Insere implementação */
 	else if($tipo_operacao == 7)
 	{
-
+		$id_implementacao = $_POST['id_implementacao'];
+		$command = "UPDATE `implementacao` SET `curtidasImplementacao` = `curtidasImplementacao`+ 1 WHERE `id_implementacao` = $id_implementacao";
+		echo insertMySQL($command);
 	}
 
 /*
