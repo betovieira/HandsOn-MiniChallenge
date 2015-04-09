@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A05F43611AD5A88B00903CD0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05F43601AD5A88B00903CD0 /* LoginViewController.m */; };
+		A0A013A71AD5BA610066AAAC /* CadastroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A013A61AD5BA610066AAAC /* CadastroViewController.m */; };
+		A0A013AA1AD5D2FE0066AAAC /* TelaBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A013A91AD5D2FE0066AAAC /* TelaBaseViewController.m */; };
 		A0B8D4DE1AD59F4000E0A8D7 /* Area.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B8D4DD1AD59F4000E0A8D7 /* Area.m */; };
 		A0B8D4E11AD59FA600E0A8D7 /* Problema.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B8D4E01AD59FA600E0A8D7 /* Problema.m */; };
 		A0B8D4E41AD5A08000E0A8D7 /* Solucao.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B8D4E31AD5A08000E0A8D7 /* Solucao.m */; };
@@ -35,6 +37,10 @@
 /* Begin PBXFileReference section */
 		A05F435F1AD5A88B00903CD0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		A05F43601AD5A88B00903CD0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		A0A013A51AD5BA610066AAAC /* CadastroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CadastroViewController.h; sourceTree = "<group>"; };
+		A0A013A61AD5BA610066AAAC /* CadastroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CadastroViewController.m; sourceTree = "<group>"; };
+		A0A013A81AD5D2FE0066AAAC /* TelaBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelaBaseViewController.h; sourceTree = "<group>"; };
+		A0A013A91AD5D2FE0066AAAC /* TelaBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelaBaseViewController.m; sourceTree = "<group>"; };
 		A0B8D4DC1AD59F4000E0A8D7 /* Area.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Area.h; sourceTree = "<group>"; };
 		A0B8D4DD1AD59F4000E0A8D7 /* Area.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Area.m; sourceTree = "<group>"; };
 		A0B8D4DF1AD59FA600E0A8D7 /* Problema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Problema.h; sourceTree = "<group>"; };
@@ -83,6 +89,10 @@
 			children = (
 				A05F435F1AD5A88B00903CD0 /* LoginViewController.h */,
 				A05F43601AD5A88B00903CD0 /* LoginViewController.m */,
+				A0A013A51AD5BA610066AAAC /* CadastroViewController.h */,
+				A0A013A61AD5BA610066AAAC /* CadastroViewController.m */,
+				A0A013A81AD5D2FE0066AAAC /* TelaBaseViewController.h */,
+				A0A013A91AD5D2FE0066AAAC /* TelaBaseViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -266,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0B8D4DE1AD59F4000E0A8D7 /* Area.m in Sources */,
+				A0A013AA1AD5D2FE0066AAAC /* TelaBaseViewController.m in Sources */,
 				A0B8D4E71AD5A1C500E0A8D7 /* Implementacao.m in Sources */,
 				DBE824601AD59C7C006065D4 /* Usuario.m in Sources */,
 				DB1AF1511AD46C04003F0283 /* ViewController.m in Sources */,
@@ -274,6 +285,7 @@
 				A0B8D4E41AD5A08000E0A8D7 /* Solucao.m in Sources */,
 				DB1AF14E1AD46C04003F0283 /* AppDelegate.m in Sources */,
 				DB1AF14B1AD46C04003F0283 /* main.m in Sources */,
+				A0A013A71AD5BA610066AAAC /* CadastroViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
