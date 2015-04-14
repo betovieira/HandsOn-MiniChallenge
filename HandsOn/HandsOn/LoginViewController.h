@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface LoginViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITextField *txtEmail;
+@property (strong, nonatomic) IBOutlet UITextField *txtSenha;
+@property (strong, nonatomic) IBOutlet UIButton *btnEntrar;
+@property (strong, nonatomic) IBOutlet UILabel *labelCadastroNaoExistente;
+
+- (IBAction)eventNaoTenhoCadastro:(id)sender;
+
+- (IBAction)eventEntrar:(id)sender;
+
 
 @end

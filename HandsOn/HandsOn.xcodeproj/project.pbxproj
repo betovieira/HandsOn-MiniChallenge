@@ -14,13 +14,16 @@
 		A0B8D4E11AD59FA600E0A8D7 /* Problema.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B8D4E01AD59FA600E0A8D7 /* Problema.m */; };
 		A0B8D4E41AD5A08000E0A8D7 /* Solucao.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B8D4E31AD5A08000E0A8D7 /* Solucao.m */; };
 		A0B8D4E71AD5A1C500E0A8D7 /* Implementacao.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B8D4E61AD5A1C500E0A8D7 /* Implementacao.m */; };
+		DB09244A1ADD5A66003EDCC3 /* BancoDadosHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0924491ADD5A66003EDCC3 /* BancoDadosHelper.m */; };
 		DB1AF14B1AD46C04003F0283 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1AF14A1AD46C04003F0283 /* main.m */; };
 		DB1AF14E1AD46C04003F0283 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1AF14D1AD46C04003F0283 /* AppDelegate.m */; };
-		DB1AF1511AD46C04003F0283 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1AF1501AD46C04003F0283 /* ViewController.m */; };
 		DB1AF1541AD46C04003F0283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1AF1521AD46C04003F0283 /* Main.storyboard */; };
 		DB1AF1561AD46C04003F0283 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1AF1551AD46C04003F0283 /* Images.xcassets */; };
 		DB1AF1591AD46C04003F0283 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB1AF1571AD46C04003F0283 /* LaunchScreen.xib */; };
 		DB1AF1651AD46C05003F0283 /* HandsOnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1AF1641AD46C05003F0283 /* HandsOnTests.m */; };
+		DB8F1F691AD77ED00068AB46 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8F1F681AD77ED00068AB46 /* photo.png */; };
+		DB8F1F791AD807A20068AB46 /* ProblemasTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8F1F781AD807A20068AB46 /* ProblemasTableViewController.m */; };
+		DB8F1F7C1AD807F60068AB46 /* SolucoesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8F1F7B1AD807F60068AB46 /* SolucoesTableViewController.m */; };
 		DBE824601AD59C7C006065D4 /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE8245F1AD59C7C006065D4 /* Usuario.m */; };
 /* End PBXBuildFile section */
 
@@ -49,19 +52,24 @@
 		A0B8D4E31AD5A08000E0A8D7 /* Solucao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Solucao.m; sourceTree = "<group>"; };
 		A0B8D4E51AD5A1C500E0A8D7 /* Implementacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Implementacao.h; sourceTree = "<group>"; };
 		A0B8D4E61AD5A1C500E0A8D7 /* Implementacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Implementacao.m; sourceTree = "<group>"; };
+		DB0924481ADD5A66003EDCC3 /* BancoDadosHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BancoDadosHelper.h; sourceTree = "<group>"; };
+		DB0924491ADD5A66003EDCC3 /* BancoDadosHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BancoDadosHelper.m; sourceTree = "<group>"; };
 		DB1AF1451AD46C04003F0283 /* HandsOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandsOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1AF1491AD46C04003F0283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB1AF14A1AD46C04003F0283 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB1AF14C1AD46C04003F0283 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DB1AF14D1AD46C04003F0283 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DB1AF14F1AD46C04003F0283 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DB1AF1501AD46C04003F0283 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DB1AF1531AD46C04003F0283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB1AF1551AD46C04003F0283 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DB1AF1581AD46C04003F0283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DB1AF15E1AD46C05003F0283 /* HandsOnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandsOnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1AF1631AD46C05003F0283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB1AF1641AD46C05003F0283 /* HandsOnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandsOnTests.m; sourceTree = "<group>"; };
+		DB8F1F681AD77ED00068AB46 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		DB8F1F771AD807A20068AB46 /* ProblemasTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProblemasTableViewController.h; sourceTree = "<group>"; };
+		DB8F1F781AD807A20068AB46 /* ProblemasTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProblemasTableViewController.m; sourceTree = "<group>"; };
+		DB8F1F7A1AD807F60068AB46 /* SolucoesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SolucoesTableViewController.h; sourceTree = "<group>"; };
+		DB8F1F7B1AD807F60068AB46 /* SolucoesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolucoesTableViewController.m; sourceTree = "<group>"; };
 		DBE8245E1AD59C7C006065D4 /* Usuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Usuario.h; sourceTree = "<group>"; };
 		DBE8245F1AD59C7C006065D4 /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Usuario.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +101,10 @@
 				A0A013A61AD5BA610066AAAC /* CadastroViewController.m */,
 				A0A013A81AD5D2FE0066AAAC /* TelaBaseViewController.h */,
 				A0A013A91AD5D2FE0066AAAC /* TelaBaseViewController.m */,
+				DB8F1F771AD807A20068AB46 /* ProblemasTableViewController.h */,
+				DB8F1F781AD807A20068AB46 /* ProblemasTableViewController.m */,
+				DB8F1F7A1AD807F60068AB46 /* SolucoesTableViewController.h */,
+				DB8F1F7B1AD807F60068AB46 /* SolucoesTableViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -118,12 +130,11 @@
 		DB1AF1471AD46C04003F0283 /* HandsOn */ = {
 			isa = PBXGroup;
 			children = (
+				DB8F1F6A1AD77ED70068AB46 /* images */,
 				A05F435E1AD5A86D00903CD0 /* Views */,
 				DB1AF16E1AD46F3D003F0283 /* Classes */,
 				DB1AF14C1AD46C04003F0283 /* AppDelegate.h */,
 				DB1AF14D1AD46C04003F0283 /* AppDelegate.m */,
-				DB1AF14F1AD46C04003F0283 /* ViewController.h */,
-				DB1AF1501AD46C04003F0283 /* ViewController.m */,
 				DB1AF1521AD46C04003F0283 /* Main.storyboard */,
 				DB1AF1551AD46C04003F0283 /* Images.xcassets */,
 				DB1AF1571AD46C04003F0283 /* LaunchScreen.xib */,
@@ -171,8 +182,18 @@
 				A0B8D4E31AD5A08000E0A8D7 /* Solucao.m */,
 				A0B8D4E51AD5A1C500E0A8D7 /* Implementacao.h */,
 				A0B8D4E61AD5A1C500E0A8D7 /* Implementacao.m */,
+				DB0924481ADD5A66003EDCC3 /* BancoDadosHelper.h */,
+				DB0924491ADD5A66003EDCC3 /* BancoDadosHelper.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		DB8F1F6A1AD77ED70068AB46 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				DB8F1F681AD77ED00068AB46 /* photo.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +245,7 @@
 				TargetAttributes = {
 					DB1AF1441AD46C04003F0283 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 7SCH5Y74F7;
 					};
 					DB1AF15D1AD46C05003F0283 = {
 						CreatedOnToolsVersion = 6.2;
@@ -255,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB8F1F691AD77ED00068AB46 /* photo.png in Resources */,
 				DB1AF1541AD46C04003F0283 /* Main.storyboard in Resources */,
 				DB1AF1591AD46C04003F0283 /* LaunchScreen.xib in Resources */,
 				DB1AF1561AD46C04003F0283 /* Images.xcassets in Resources */,
@@ -279,13 +302,15 @@
 				A0A013AA1AD5D2FE0066AAAC /* TelaBaseViewController.m in Sources */,
 				A0B8D4E71AD5A1C500E0A8D7 /* Implementacao.m in Sources */,
 				DBE824601AD59C7C006065D4 /* Usuario.m in Sources */,
-				DB1AF1511AD46C04003F0283 /* ViewController.m in Sources */,
 				A0B8D4E11AD59FA600E0A8D7 /* Problema.m in Sources */,
 				A05F43611AD5A88B00903CD0 /* LoginViewController.m in Sources */,
 				A0B8D4E41AD5A08000E0A8D7 /* Solucao.m in Sources */,
 				DB1AF14E1AD46C04003F0283 /* AppDelegate.m in Sources */,
+				DB09244A1ADD5A66003EDCC3 /* BancoDadosHelper.m in Sources */,
+				DB8F1F791AD807A20068AB46 /* ProblemasTableViewController.m in Sources */,
 				DB1AF14B1AD46C04003F0283 /* main.m in Sources */,
 				A0A013A71AD5BA610066AAAC /* CadastroViewController.m in Sources */,
+				DB8F1F7C1AD807F60068AB46 /* SolucoesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,9 +432,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HandsOn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -418,9 +446,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HandsOn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;

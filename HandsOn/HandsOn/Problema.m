@@ -11,7 +11,7 @@
 @implementation Problema
 
 
-+ (NSMutableArray *) retornaProblemasTodos
+- (NSMutableArray *) retornaProblemasTodos
 {
     NSMutableArray *listaProblemasTodos = [[NSMutableArray alloc] init];
     
@@ -40,7 +40,7 @@
     return listaProblemasTodos;
 }
 
-+ (NSMutableArray *) retornaProblemasArea: (Area *)a
+- (NSMutableArray *) retornaProblemasArea: (Area *)a
 {
     NSMutableArray *listaProblemasArea = [[NSMutableArray alloc] init];
     
@@ -71,7 +71,7 @@
 
 
 
-+ (NSMutableArray *) retornaProblemasCurtidos
+- (NSMutableArray *) retornaProblemasCurtidos
 {
     NSMutableArray *listaProblemasCurtidos = [[NSMutableArray alloc] init];
     
@@ -100,7 +100,7 @@
     return listaProblemasCurtidos;
 }
 
-+ (NSMutableArray *) retornaQuantidadeDeSolucoes: (Problema *)r;
+- (NSMutableArray *) retornaQuantidadeDeSolucoes: (Problema *)r;
 {
     NSMutableArray *listaQuantidadeCurtidas = [[NSMutableArray alloc] init];
     
@@ -129,7 +129,7 @@
     return listaQuantidadeCurtidas;
 }
 
-+ (NSMutableArray *) retornaSolucoesPorProblema:(Problema *)r;
+-(NSMutableArray *) retornaSolucoesPorProblema:(Problema *)r;
 {
     NSMutableArray *listaTodasSolucoes = [[NSMutableArray alloc] init];
     

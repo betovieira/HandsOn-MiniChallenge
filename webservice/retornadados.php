@@ -11,7 +11,7 @@ http://betovieira.com.br/handson/retornadados.php?tipo_operacao=1&email=humberto
 		$email = $_GET['email'];
 		$senha = $_GET['senha'];
 
-		$query = "SELECT * FROM `usuario` WHERE email = '$email' and senha = '$senha'";
+		$query = "SELECT `id_usuario` FROM `usuario` WHERE email = '$email' and senha = '$senha'";
 		echo selectMySQL($query);
 	}
 	/* RETORNA USUÁRIOS POR ID_USUARIO

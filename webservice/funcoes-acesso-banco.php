@@ -25,11 +25,14 @@
 	*/
 	function insertMySQL($command){
 		include 'conecta.php';
-
-		$result_query = mysqli_query($con, $command) or die (mysqli_error($con));
-
+		try{
+			$result_query = mysqli_query($con, $command);
+			
+		}catch(Exception $e)
+		{
+			return '[{"retorno":"false"}]';
+		}
 		mysqli_close($con);
-		
 		return '[{"retorno":"'.json_encode($result_query).'"}]';
 	}
 

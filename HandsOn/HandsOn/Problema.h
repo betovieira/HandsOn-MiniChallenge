@@ -18,10 +18,10 @@
 @property (nonatomic) NSString *descricaoProblema;
 @property (nonatomic) int curtidasProblema;
 
-+ (NSMutableArray *) retornaProblemasTodos;
-+ (NSMutableArray *) retornaProblemasArea: (Area *)a;
-+ (NSMutableArray *) retornaProblemasCurtidos;
-+ (NSMutableArray *) retornaQuantidadeDeSolucoes: (Problema *)r;
-+ (NSMutableArray *) retornaSolucoesPorProblema: (Problema *)r;
+- (NSMutableArray *) retornaProblemasTodos;
+- (NSMutableArray *) retornaProblemasArea: (Area *)a;
+- (NSMutableArray *) retornaProblemasCurtidos;
+- (NSMutableArray *) retornaQuantidadeDeSolucoes: (Problema *)r;
+- (NSMutableArray *) retornaSolucoesPorProblema: (Problema *)r;
 
 @end

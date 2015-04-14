@@ -7,6 +7,9 @@
 //
 
 #import "LoginViewController.h"
+#import "Usuario.h"
+#import "ProblemasTableViewController.h"
+
 
 @interface LoginViewController ()
 
@@ -17,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.labelCadastroNaoExistente.hidden = true;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +40,27 @@
 }
 */
 
+
+- (IBAction)eventNaoTenhoCadastro:(id)sender {
+
+    
+}
+
+- (IBAction)eventEntrar:(id)sender {
+    Usuario *u = [[Usuario alloc] init];
+    u.email = self.txtEmail.text;
+    u.senha = self.txtSenha.text;
+    
+    if([u verificaLogin:u])
+    {
+        UIStoryboard * tela = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LoginViewController * view = [tela instantiateViewControllerWithIdentifier:@"viewMenuPrincipal"];
+        view.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+        [self presentViewController:view animated:YES completion:nil];
+    }else{
+        self.labelCadastroNaoExistente.hidden = false;
+        
+        NSLog(@"Usuario nao encontrado");
+    }
+}
 @end

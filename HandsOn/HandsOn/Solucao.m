@@ -10,7 +10,7 @@
 
 @implementation Solucao
 
-+ (NSMutableArray *) retornaSolucoes
+- (NSMutableArray *) retornaSolucoes
 {
     NSMutableArray *listaSolucoes = [[NSMutableArray alloc] init];
     
@@ -29,6 +29,7 @@
         Solucao*s = [[Solucao alloc] init];
         s.id_solucao = [[separaAtributos objectForKey:@"id_solucao"] intValue];
         s.id_problema = [[separaAtributos objectForKey:@"id_problema"] intValue];
+        s.id_area =[[separaAtributos objectForKey:@"id_area"] intValue];
         s.descricaoSolucao = [separaAtributos objectForKey:@"descricaoSolucao"] ;
         s.caminhoAnexoSolucao = [separaAtributos objectForKey:@"caminhoAnexoSolucao"];
         s.interesses = [separaAtributos objectForKey:@"interesses"] ;
@@ -41,7 +42,7 @@
     return listaSolucoes;
 }
 
-+ (NSMutableArray *) retornaSolucoesPorID:(Solucao *)s
+- (NSMutableArray *) retornaSolucoesPorID:(Solucao *)s
 {
     NSMutableArray *listaSolucoesPorID = [[NSMutableArray alloc] init];
     
@@ -72,7 +73,7 @@
     return listaSolucoesPorID;
 }
 
-+ (NSMutableArray *) retornaSolucoesPorArea:(Area *)a
+- (NSMutableArray *) retornaSolucoesPorArea:(Area *)a
 {
     NSMutableArray *listaSolucoesPorArea = [[NSMutableArray alloc] init];
     
@@ -103,7 +104,7 @@
     return listaSolucoesPorArea;
 }
 
-+ (NSMutableArray *) retornaSolucoesCurtidas
+- (NSMutableArray *) retornaSolucoesCurtidas
 {
     NSMutableArray *listaSolucoesCurtidas = [[NSMutableArray alloc] init];
     
@@ -134,9 +135,9 @@
     return listaSolucoesCurtidas;
 }
 
-+ (NSMutableArray *) retornaQuantidadeImplementacoes:(Solucao *)s
+- (NSInteger*) retornaQuantidadeImplementacoes:(Solucao *)s
 {
-    NSMutableArray *listaImplementacoes = [[NSMutableArray alloc] init];
+    NSInteger retorno = 0;
     
     NSString *string = [NSString stringWithFormat:@"http://betovieira.com.br/handson/retornadados.php?tipo_operacao=14&id_solucao=%d", s.id_solucao];
     
@@ -150,22 +151,13 @@
     for (int i = 0; i < separaObjetos.count; i++) {
         separaAtributos = [separaObjetos objectAtIndex:i];
         
-        Solucao*s = [[Solucao alloc] init];
-        s.id_solucao = [[separaAtributos objectForKey:@"id_solucao"] intValue];
-        s.id_problema = [[separaAtributos objectForKey:@"id_problema"] intValue];
-        s.descricaoSolucao = [separaAtributos objectForKey:@"descricaoSolucao"] ;
-        s.caminhoAnexoSolucao = [separaAtributos objectForKey:@"caminhoAnexoSolucao"];
-        s.interesses = [separaAtributos objectForKey:@"interesses"] ;
-        s.curtidasSolucao = [[separaAtributos objectForKey:@"curtidasSolucao"] intValue];
-        
-        
-        [listaImplementacoes addObject:s];
+        retorno = [[separaAtributos objectForKey:@"retorno"] integerValue];
     }
     
-    return listaImplementacoes;
+    return retorno;
 }
 
-+ (NSMutableArray *) retornaImplementacoesPorSolucao:(Solucao *)s
+- (NSMutableArray *) retornaImplementacoesPorSolucao:(Solucao *)s
 {
     NSMutableArray *listaImplementacoesPorSolucao= [[NSMutableArray alloc] init];
     

@@ -15,9 +15,9 @@
 @property (nonatomic) NSString *email;
 @property (nonatomic) NSString *senha;
 @property (nonatomic) NSString *curso;
-@property (nonatomic) NSString *interesse;
+@property (nonatomic) NSString *interesses;
 
-
-
+-(bool) verificaLogin :(Usuario *)u;
+-(bool) cadastroUsuario :(Usuario *)u;
 
 @end

@@ -7,9 +7,10 @@
 //
 
 #import "CadastroViewController.h"
+#import "Usuario.h"
 
 @interface CadastroViewController ()
-
+- (bool) verificaValido:(NSString *)str;
 @end
 
 @implementation CadastroViewController
@@ -17,11 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.txtStatus.hidden = true;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+
 }
 
 /*
@@ -34,4 +37,33 @@
 }
 */
 
+- (IBAction)eventCadastrar:(id)sender {
+    Usuario *u = [[Usuario alloc]init];
+    u.nomeUsuario = self.txtUsuario.text;
+    u.email = self.txtEmail.text;
+    u.senha = self.txtSenha.text;
+    u.curso = self.txtCurso.text;
+    u.interesses = self.txtHabilidades.text;
+    
+    if(![u.nomeUsuario isEqual: @""] && ![u.email isEqual: @""] && ![u.senha isEqual: @""] &&
+       ![u.curso isEqual: @""] && ![u.interesses isEqual: @""]){
+        if([u cadastroUsuario:u])
+        {
+            self.txtStatus.hidden = false;
+            self.txtStatus.text = @"Cadastrado com sucesso!";
+        }else{
+            self.txtStatus.hidden = false;
+            self.txtStatus.text = @"Email existente no banco de dados";
+        }
+    }else{
+        self.txtStatus.hidden = false;
+        self.txtStatus.text = @"Preencha campos vazios!";
+    }
+}
+
+- (bool) verificaValido:(NSString *)str {
+    if([str isEqual: @""])
+        return false;
+    return true;
+}
 @end
