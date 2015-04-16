@@ -10,26 +10,41 @@
 #import "Problema.h"
 
 @interface ProblemasTableViewController ()
+@property (strong, nonatomic) IBOutlet UIToolbar *toolBar;
 
 @end
 
 @implementation ProblemasTableViewController
 
 Problema *p;
+Area *a;
 NSMutableArray *listaProblema;
+NSMutableArray *listaAreas;
+UIActionSheet *ordenarActionSheet;
+UIActionSheet *filtrarActionSheet;
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     p = [[Problema alloc]init];
+    a = [[Area alloc] init];
     listaProblema = [p retornaProblemasTodos];
+    listaAreas = [a retornaAreasTodas];
+    
+    ordenarActionSheet = [[UIActionSheet alloc] initWithTitle:@"Ordenar por:"
+                                                     delegate:self
+                                            cancelButtonTitle:nil
+                                       destructiveButtonTitle:nil
+                                            otherButtonTitles:@"Mais curtidas", @"Ultimos inseridos",  nil];
+    
+    filtrarActionSheet = [[UIActionSheet alloc] initWithTitle:@"Filtrar por:"
+                                                     delegate:self
+                                            cancelButtonTitle:nil
+                                       destructiveButtonTitle:nil
+                                            otherButtonTitles:nil];
     
     
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,13 +55,11 @@ NSMutableArray *listaProblema;
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return listaProblema.count;
 }
@@ -64,36 +77,6 @@ NSMutableArray *listaProblema;
     UILabel *labelArea = (UILabel *)[cell viewWithTag:101];
     NSString *areadoida = NULL;
     
-    if(p.id_area == 1)
-    {
-        areadoida = @"Educaçao";
-    }else if(p.id_area == 2)
-    {
-        areadoida = @"Saude";
-    }else if(p.id_area == 4)
-    {
-        areadoida = @"Entretenimento";
-    }else if(p.id_area == 5)
-    {
-        areadoida = @"Culinaria";
-    }else if(p.id_area == 6)
-    {
-        areadoida = @"Informatica";
-    }else if(p.id_area == 7)
-    {
-        areadoida = @"Organizaçao";
-    }else if(p.id_area == 8)
-    {
-        areadoida = @"Geral";
-    }
-    else if(p.id_area == 9)
-    {
-        areadoida = @"Segurança";
-    }else if(p.id_area == 10)
-    {
-        areadoida = @"Viagem";
-    }
-        
     
     labelArea.text = [NSString stringWithFormat:@"Area: %@", areadoida];
     
@@ -118,52 +101,40 @@ NSMutableArray *listaProblema;
     return cell;
 }
 
+
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //NSLog(@"%lu", indexPath.row);
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+- (IBAction)showOrdenarActionSheet:(id)sender {
+    
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        [ordenarActionSheet showFromBarButtonItem:(UIBarButtonItem *)sender animated:YES];
+        
+    }else{
+        [ordenarActionSheet showInView:self.view];
+    }
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
 }
-*/
+- (IBAction)showFiltrarPorArea:(id)sender {
+    
+    //Coloca no Botão de Filtrar Área
+    for(Area * a in listaAreas)
+        [filtrarActionSheet addButtonWithTitle:a.nomeArea];
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+    //Se for iPad
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        [filtrarActionSheet showFromBarButtonItem:(UIBarButtonItem *)sender animated:YES];
+    //Se for iPhone
+    }else{
+        [filtrarActionSheet showInView:self.view];
+    }
+    
 }
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

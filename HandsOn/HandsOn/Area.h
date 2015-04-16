@@ -16,4 +16,6 @@
 @property (nonatomic) int g;
 @property (nonatomic) int b;
 
+- (NSMutableArray *) retornaAreasTodas;
+
 @end
