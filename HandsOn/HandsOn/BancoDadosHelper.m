@@ -13,7 +13,6 @@
 
 + (NSArray *) retornaDados:(NSString *)url
 {
-    NSMutableArray *listaAreas = [[NSMutableArray alloc] init];
     
     NSString *string = url;
     

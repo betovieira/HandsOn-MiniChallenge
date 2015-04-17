@@ -163,6 +163,80 @@ http://betovieira.com.br/handson/retornadados.php?tipo_operacao=18
 		echo selectMySQL($query);
 	}
 
+	/* RETORNA TODOS OS PROBLEMAS POR AREA E POR ULTIMOS INSERIDOS 
+		http://betovieira.com.br/handson/retornadados.php?tipo_operacao=19
+	*/
+	else if($tipo_operacao == 19) {
+		$area = $_GET['area'];
+		if($area == NULL)
+			$area = '';
+
+		$query = "SELECT P.id_problema, A.nomeArea, P.descricaoProblema, U.nome_usuario, P.curtidasProblema
+      				FROM `problema` AS P 
+			  INNER JOIN `area` AS A
+        					ON P.id_area = A.id_area
+			  INNER JOIN `usuario` AS U
+							ON P.id_usuario = U.id_usuario
+     			   WHERE A.nomeArea LIKE '%$area%'
+  				ORDER BY P.`id_problema` DESC";
+
+		echo selectMySQL($query);
+	}
+
+	/* RETORNA TODOS OS PROBLEMAS ADAPTADOS
+		http://betovieira.com.br/handson/retornadados.php?tipo_operacao=19
+	*/
+	else if($tipo_operacao == 20) {
+		$area = $_GET['area'];
+		if($area == NULL)
+			$area = '';
+
+		$query = "SELECT P.id_problema, A.nomeArea, P.descricaoProblema, U.nome_usuario, P.curtidasProblema
+      				FROM `problema` AS P 
+			  INNER JOIN `area` AS A
+        					ON P.id_area = A.id_area
+			  INNER JOIN `usuario` AS U
+							ON P.id_usuario = U.id_usuario
+  				ORDER BY P.`id_problema` DESC";
+
+		echo selectMySQL($query);
+	}
+
+		/* RETORNA TODOS OS PROBLEMAS POR AREA ADAPTADOS EM ORDEM DE CURTIDA
+		http://betovieira.com.br/handson/retornadados.php?tipo_operacao=19
+	*/
+	else if($tipo_operacao == 21) {
+		$area = $_GET['area'];
+
+		$query = "SELECT P.id_problema, A.nomeArea, P.descricaoProblema, U.nome_usuario, P.curtidasProblema
+      				FROM `problema` AS P 
+			  INNER JOIN `area` AS A
+        					ON P.id_area = A.id_area
+			  INNER JOIN `usuario` AS U
+							ON P.id_usuario = U.id_usuario
+				   WHERE A.`nomeArea` LIKE '%$area%'
+  				ORDER BY P.`curtidasProblema` DESC";
+	
+		echo selectMySQL($query);
+	}
+
+			/* RETORNA TODOS OS PROBLEMAS ADAPTADOS EM ORDEM DE CURTIDA
+		http://betovieira.com.br/handson/retornadados.php?tipo_operacao=19
+	*/
+	else if($tipo_operacao == 22) {
+		$area = $_GET['area'];
+
+		$query = "SELECT P.id_problema, A.nomeArea, P.descricaoProblema, U.nome_usuario, P.curtidasProblema
+      				FROM `problema` AS P 
+			  INNER JOIN `area` AS A
+        					ON P.id_area = A.id_area
+			  INNER JOIN `usuario` AS U
+							ON P.id_usuario = U.id_usuario
+  				ORDER BY P.`curtidasProblema` DESC";
+	
+		echo selectMySQL($query);
+	}
+
 
 
 ?>

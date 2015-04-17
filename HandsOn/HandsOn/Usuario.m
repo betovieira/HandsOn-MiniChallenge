@@ -33,7 +33,6 @@
 
 -(bool) cadastroUsuario :(Usuario *)u
 {
-    bool retorno;
     
     @try {
         NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://betovieira.com.br/handson/inseredados.php"]];
@@ -46,7 +45,7 @@
 
         [urlRequest setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
 
-        [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
+        NSURLConnection *c = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
         NSData *response = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:nil];
         NSArray *separaObjetos = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
         NSDictionary *separaAtributos = [separaObjetos objectAtIndex:0];
@@ -64,5 +63,7 @@
     }
     
 }
+
+/*USANDO*/
 
 @end

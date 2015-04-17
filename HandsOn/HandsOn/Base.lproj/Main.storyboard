@@ -282,17 +282,24 @@
                             <rect key="frame" x="0.0" y="0.0" width="703" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
-                                <barButtonItem title="Ordenar por" width="91" id="pSn-gY-k7Q">
+                                <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="4dt-mV-Nj2"/>
+                                <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Mpr-gJ-P4f"/>
+                                <barButtonItem title="Ordenar por: " width="114" id="pSn-gY-k7Q">
                                     <connections>
                                         <action selector="showOrdenarActionSheet:" destination="Uif-TA-t2M" id="x6b-M4-qkP"/>
                                     </connections>
                                 </barButtonItem>
-                                <barButtonItem style="plain" systemItem="flexibleSpace" id="Smn-qN-lHL"/>
-                                <barButtonItem title="Filtrar área" id="qj4-e7-sGQ">
+                                <barButtonItem title="Todos" id="SZx-05-3oa"/>
+                                <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="7Yc-kD-NdH"/>
+                                <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="svh-Q4-YJe"/>
+                                <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="SGD-KB-dhN"/>
+                                <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="avR-ak-fLg"/>
+                                <barButtonItem title="Filtrar área:" id="qj4-e7-sGQ">
                                     <connections>
                                         <action selector="showFiltrarPorArea:" destination="Uif-TA-t2M" id="hkl-PA-8gw"/>
                                     </connections>
                                 </barButtonItem>
+                                <barButtonItem title="Todos" id="IPe-sR-V3S"/>
                             </items>
                         </toolbar>
                         <prototypes>
@@ -301,12 +308,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zbQ-J9-p6Z" id="j0w-36-5mw">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Solução" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dV6-Qf-Bqa">
-                                            <rect key="frame" x="30" y="37" width="633" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEW-Su-J8S">
                                             <rect key="frame" x="30" y="66" width="633" height="32"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -358,6 +359,8 @@
                     <navigationItem key="navigationItem" title="PROBLEMAS" id="fk2-iu-71p"/>
                     <connections>
                         <outlet property="btnFiltrarArea" destination="qj4-e7-sGQ" id="cHR-Uz-dq5"/>
+                        <outlet property="lblFilResp" destination="IPe-sR-V3S" id="tYf-dk-cKl"/>
+                        <outlet property="lblOrdResp" destination="SZx-05-3oa" id="eYM-VL-8My"/>
                         <outlet property="toolBar" destination="YOA-h8-433" id="N0m-Ox-T48"/>
                     </connections>
                 </tableViewController>
@@ -521,7 +524,6 @@
         <!--Menu Principal View Controller-->
         <scene sceneID="i2X-ah-o0X">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tJb-YZ-Vmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <splitViewController storyboardIdentifier="viewMenuPrincipal" automaticallyAdjustsScrollViewInsets="NO" id="2U8-AH-z9z" customClass="MenuPrincipalViewController" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -531,6 +533,7 @@
                         <segue destination="YoH-Rs-25w" kind="relationship" relationship="masterViewController" id="27f-Ws-uUh"/>
                     </connections>
                 </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJb-YZ-Vmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1206" y="550"/>
         </scene>

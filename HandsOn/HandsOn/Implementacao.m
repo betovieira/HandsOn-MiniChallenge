@@ -42,6 +42,7 @@
     }
     
     return listaImplementacoes;
+    /* USANDO */
 }
 
 + (NSMutableArray *) retornaImplementacoesPorArea:(Area *)a

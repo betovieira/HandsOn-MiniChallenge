@@ -8,9 +8,12 @@
 
 #import "ProblemasTableViewController.h"
 #import "Problema.h"
+#import "ProblemasAdapterViewObject.h"
 
 @interface ProblemasTableViewController ()
 @property (strong, nonatomic) IBOutlet UIToolbar *toolBar;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *lblOrdResp;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *lblFilResp;
 
 @end
 
@@ -18,18 +21,27 @@
 
 Problema *p;
 Area *a;
+ProblemasAdapterViewObject *pa;
 NSMutableArray *listaProblema;
 NSMutableArray *listaAreas;
 UIActionSheet *ordenarActionSheet;
 UIActionSheet *filtrarActionSheet;
+NSString *paramOrdenar;
+NSString *paramFiltrar;
+
 
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    paramOrdenar = @"Ultimos Inseridos";
+    paramFiltrar = @"Todos";
     p = [[Problema alloc]init];
     a = [[Area alloc] init];
-    listaProblema = [p retornaProblemasTodos];
+    pa = [[ProblemasAdapterViewObject alloc] init];
+    
+    listaProblema = [pa retornaProblemasAdaptadosTodos];
     listaAreas = [a retornaAreasTodas];
     
     ordenarActionSheet = [[UIActionSheet alloc] initWithTitle:@"Ordenar por:"
@@ -72,30 +84,26 @@ UIActionSheet *filtrarActionSheet;
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellProblema"];
     }
     
-    p = [listaProblema objectAtIndex:indexPath.row];
+    pa = [listaProblema objectAtIndex:indexPath.row];
     
     UILabel *labelArea = (UILabel *)[cell viewWithTag:101];
-    NSString *areadoida = NULL;
     
     
-    labelArea.text = [NSString stringWithFormat:@"Area: %@", areadoida];
+    labelArea.text = [NSString stringWithFormat:@"Área: %@", pa.nomeArea];
     
     
-    UILabel *labelSolucao = (UILabel *)[cell viewWithTag:102];
-    labelSolucao.text = [NSString stringWithFormat:@"Problema: %d", p.id_problema];
-    
-    
+
     
     UILabel *labelTitulo = (UILabel *)[cell viewWithTag:103];
-    labelTitulo.text = p.descricaoProblema;
+    labelTitulo.text = pa.descricaoProblema;
     
     
     UILabel *labelCriador = (UILabel *)[cell viewWithTag:104];
-    labelCriador.text = [NSString stringWithFormat:@"Usuario: %d",p.id_usuario];
+    labelCriador.text = [NSString stringWithFormat:@"Usuario: %@",pa.nome_usuario];
     
     
     UILabel *labelCurtida = (UILabel *)[cell viewWithTag:105];
-    labelCurtida.text = [NSString stringWithFormat:@"Curtidas: %d", p.curtidasProblema];
+    labelCurtida.text = [NSString stringWithFormat:@"Curtidas: %d", pa.curtidasProblema];
     // Configure the cell...
     
     return cell;
@@ -120,7 +128,8 @@ UIActionSheet *filtrarActionSheet;
 
 }
 - (IBAction)showFiltrarPorArea:(id)sender {
-    
+    [filtrarActionSheet addButtonWithTitle:@"Todos"];
+
     //Coloca no Botão de Filtrar Área
     for(Area * a in listaAreas)
         [filtrarActionSheet addButtonWithTitle:a.nomeArea];
@@ -136,5 +145,52 @@ UIActionSheet *filtrarActionSheet;
     
 }
 
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *param;
+    
+   @try {
+       param = [actionSheet buttonTitleAtIndex:buttonIndex];
+        if(actionSheet == ordenarActionSheet)
+        {
+            paramOrdenar = param;
+            
+            if([paramOrdenar isEqualToString:@"Ultimos inseridos"])
+            {
+                if([paramFiltrar isEqualToString:@"Todos"]){
+                    listaProblema = [pa retornaProblemasAdaptadosTodos];
+                }else{
+                    listaProblema = [pa retornaTodosProblemasAdaptadosAreaUltimos:paramFiltrar];
+                }
+            }else if([paramOrdenar isEqualToString:@"Mais curtidas"])
+            {
+                if([paramFiltrar isEqualToString:@"Todos"]){
+                    listaProblema = [pa retornaProblemasAdaptadosTodosPorCurtida];
+                }else{
+                    listaProblema = [pa retornaTodosProblemasAdaptadosAreaCurtida:paramFiltrar];
+                }
+            }
+        }
+       
+        if(actionSheet == filtrarActionSheet)
+        {
+            paramFiltrar = param;
+            
+            if([param isEqualToString:@"Todos"]){
+                listaProblema = [pa retornaProblemasAdaptadosTodos];
+            }else{
+                listaProblema = [pa retornaTodosProblemasAdaptadosAreaUltimos:paramFiltrar];
+            }
+        }
+
+    
+    [((UITableView *)self.view)reloadData];
+        
+   }@catch(NSException *e) {
+       NSLog(@"Clique fora da ActionSheet");
+   }
+    self.lblOrdResp.title = paramOrdenar;
+    self.lblFilResp.title = paramFiltrar;
+}
 
 @end

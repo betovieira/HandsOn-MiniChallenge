@@ -16,6 +16,7 @@
 		A0B8D4E71AD5A1C500E0A8D7 /* Implementacao.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B8D4E61AD5A1C500E0A8D7 /* Implementacao.m */; };
 		DB09244A1ADD5A66003EDCC3 /* BancoDadosHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0924491ADD5A66003EDCC3 /* BancoDadosHelper.m */; };
 		DB0924501ADEE1F7003EDCC3 /* MenuPrincipalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB09244F1ADEE1F7003EDCC3 /* MenuPrincipalViewController.m */; };
+		DB0924531AE0500F003EDCC3 /* ProblemasAdapterViewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0924521AE0500F003EDCC3 /* ProblemasAdapterViewObject.m */; };
 		DB1AF14B1AD46C04003F0283 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1AF14A1AD46C04003F0283 /* main.m */; };
 		DB1AF14E1AD46C04003F0283 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1AF14D1AD46C04003F0283 /* AppDelegate.m */; };
 		DB1AF1541AD46C04003F0283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1AF1521AD46C04003F0283 /* Main.storyboard */; };
@@ -57,6 +58,8 @@
 		DB0924491ADD5A66003EDCC3 /* BancoDadosHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BancoDadosHelper.m; sourceTree = "<group>"; };
 		DB09244E1ADEE1F7003EDCC3 /* MenuPrincipalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuPrincipalViewController.h; sourceTree = "<group>"; };
 		DB09244F1ADEE1F7003EDCC3 /* MenuPrincipalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuPrincipalViewController.m; sourceTree = "<group>"; };
+		DB0924511AE0500F003EDCC3 /* ProblemasAdapterViewObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProblemasAdapterViewObject.h; sourceTree = "<group>"; };
+		DB0924521AE0500F003EDCC3 /* ProblemasAdapterViewObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProblemasAdapterViewObject.m; sourceTree = "<group>"; };
 		DB1AF1451AD46C04003F0283 /* HandsOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandsOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1AF1491AD46C04003F0283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB1AF14A1AD46C04003F0283 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 				A0B8D4E61AD5A1C500E0A8D7 /* Implementacao.m */,
 				DB0924481ADD5A66003EDCC3 /* BancoDadosHelper.h */,
 				DB0924491ADD5A66003EDCC3 /* BancoDadosHelper.m */,
+				DB0924511AE0500F003EDCC3 /* ProblemasAdapterViewObject.h */,
+				DB0924521AE0500F003EDCC3 /* ProblemasAdapterViewObject.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0924531AE0500F003EDCC3 /* ProblemasAdapterViewObject.m in Sources */,
 				A0B8D4DE1AD59F4000E0A8D7 /* Area.m in Sources */,
 				A0A013AA1AD5D2FE0066AAAC /* TelaBaseViewController.m in Sources */,
 				A0B8D4E71AD5A1C500E0A8D7 /* Implementacao.m in Sources */,

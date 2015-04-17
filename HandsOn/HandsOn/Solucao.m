@@ -41,6 +41,7 @@
     
     return listaSolucoes;
 }
+/* USANDO */
 
 - (NSMutableArray *) retornaSolucoesPorID:(Solucao *)s
 {

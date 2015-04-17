@@ -7,15 +7,19 @@
 	{
 		include 'conecta.php';
 		
-		$array_json = array();
-		$result_query = mysqli_query($con, $query);
+		try{
+			$array_json = array();
+			$result_query = mysqli_query($con, $query);
 
-		while($row = mysqli_fetch_array($result_query, MYSQL_ASSOC) ){
-			array_push($array_json, $row);
+			while($row = mysqli_fetch_array($result_query, MYSQL_ASSOC) ){
+				array_push($array_json, $row);
+			}
+			
+			mysqli_close($con);
+		}catch(Exception $e){
+			return '[{"retorno":"false"}]';
 		}
-		
-		mysqli_close($con);
-		
+
 		return json_encode($array_json);
 	}
 

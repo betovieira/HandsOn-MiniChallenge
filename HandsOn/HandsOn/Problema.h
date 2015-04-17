@@ -19,6 +19,9 @@
 @property (nonatomic) int curtidasProblema;
 
 - (NSMutableArray *) retornaProblemasTodos;
+- (NSMutableArray *) retornaProblemasTodosAreaUltimos: (NSString *)strArea;
+
+
 - (NSMutableArray *) retornaProblemasArea: (Area *)a;
 - (NSMutableArray *) retornaProblemasCurtidos;
 - (NSMutableArray *) retornaQuantidadeDeSolucoes: (Problema *)r;
