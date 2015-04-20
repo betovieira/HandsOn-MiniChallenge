@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface ProblemasTableViewController : UITableViewController
-@property (strong, nonatomic) IBOutlet UIToolbar *btnOrdenarPor;
-- (IBAction)showOrdenarActionSheet:(id)sender;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnFiltrarArea;
-- (IBAction)showFiltrarPorArea:(id)sender;
+
+- (id)initWithListaNova:(NSMutableArray *)listaNova;
+//@property (strong, nonatomic) IBOutlet UIToolbar *btnOrdenarPor;
+//- (IBAction)showOrdenarActionSheet:(id)sender;
+//@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnFiltrarArea;
+//- (IBAction)showFiltrarPorArea:(id)sender;
 
 
 @end
