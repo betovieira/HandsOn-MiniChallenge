@@ -10,4 +10,6 @@
 
 @interface SolucoesTableViewController : UITableViewController
 
+- (id)initWithListaNova:(NSMutableArray *)listaNova;
+
 @end

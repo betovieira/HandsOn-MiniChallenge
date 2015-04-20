@@ -63,6 +63,17 @@ NSMutableArray *listaSolucao;
     
 }
 
+- (id)initWithListaNova:(NSMutableArray *)listaNova {
+    self = [super init];
+    if(self){
+        listaSolucao = listaNova;
+    }
+    
+    [((UITableView *)self.view)reloadData];
+    return self;
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

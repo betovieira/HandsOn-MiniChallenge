@@ -1,27 +1,26 @@
 //
-//  BaseProblemasViewController.m
+//  BaseSolucoesViewController.m
 //  HandsOn
 //
-//  Created by Humberto Vieira de Castro on 4/19/15.
+//  Created by Humberto Vieira de Castro on 4/20/15.
 //  Copyright (c) 2015 Humberto Vieira de Castro. All rights reserved.
 //
 
-#import "BaseProblemasViewController.h"
+#import "BaseSolucoesViewController.h"
+#import "SolucoesAdapterViewObject.h"
+#import "SolucoesTableViewController.h"
 #import "Area.h"
-#import "ProblemasTableViewController.h"
-#import "ProblemasAdapterViewObject.h"
 
-@interface BaseProblemasViewController ()<UIActionSheetDelegate>
+@interface BaseSolucoesViewController () <UIActionSheetDelegate>
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *lblOrdenar;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *lblFiltrar;
-
 @end
 
-@implementation BaseProblemasViewController
+@implementation BaseSolucoesViewController
 
 Area *a;
-ProblemasAdapterViewObject *pa;
-NSMutableArray *listaProblema;
+SolucoesAdapterViewObject *sa;
+NSMutableArray *listaSolucoes;
 NSMutableArray *listaAreas;
 UIActionSheet *ordenarActionSheet;
 UIActionSheet *filtrarActionSheet;
@@ -29,25 +28,26 @@ NSString *paramOrdenar;
 NSString *paramFiltrar;
 UIButton *imagemCurtir;
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    pa = [[ProblemasAdapterViewObject alloc] init];
+    sa = [[SolucoesAdapterViewObject alloc]init];
     
-    ProblemasTableViewController *problemaView;
+    SolucoesTableViewController *solucoesView;
     
-    listaProblema = [pa retornaProblemasAdaptadosTodos];
-    problemaView = [[ProblemasTableViewController alloc] initWithListaNova:listaProblema];
+    listaSolucoes = [sa retornaSolucaoAdaptadosTodos];
+    solucoesView = [[SolucoesTableViewController alloc]initWithListaNova:listaSolucoes];
     
-    problemaView = [self.storyboard instantiateViewControllerWithIdentifier:@"viewProblemas"];
-    problemaView.view.frame = self.containerView.frame;
+    solucoesView = [self.storyboard instantiateViewControllerWithIdentifier:@"viewSolucoes"];
     
-    [problemaView willMoveToParentViewController:self];
-    [self.containerView addSubview:problemaView.view];
-    [self addChildViewController:problemaView];
-    [problemaView didMoveToParentViewController:self];
+    solucoesView.view.frame = self.containerView.frame;
     
-   
+    [solucoesView willMoveToParentViewController:self];
+    [self.containerView addSubview:solucoesView.view];
+    [self addChildViewController:solucoesView];
+    [solucoesView didMoveToParentViewController:self];
+    
     
     paramOrdenar = @"Ultimos inseridos";
     paramFiltrar = @"Todos";
@@ -69,29 +69,25 @@ UIButton *imagemCurtir;
                                             cancelButtonTitle:nil
                                        destructiveButtonTitle:nil
                                             otherButtonTitles:nil];
+    
 
     
-    // Do any additional setup after loading the view.
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void) mudaContainerView:(NSMutableArray *)m
 {
-    ProblemasTableViewController *problemaView;
-    problemaView = [[ProblemasTableViewController alloc] initWithListaNova:m];
+    SolucoesTableViewController *solucoesView;
+    solucoesView = [[SolucoesTableViewController alloc] initWithListaNova:m];
     
-    problemaView = [self.storyboard instantiateViewControllerWithIdentifier:@"viewProblemas"];
+    solucoesView = [self.storyboard instantiateViewControllerWithIdentifier:@"viewSolucoes"];
     
-    problemaView.view.frame = self.containerView.frame;
+    solucoesView.view.frame = self.containerView.frame;
     
-    [problemaView willMoveToParentViewController:self];
-    [self.containerView addSubview:problemaView.view];
-    [self addChildViewController:problemaView];
-    [problemaView didMoveToParentViewController:self];
+    [solucoesView willMoveToParentViewController:self];
+    [self.containerView addSubview:solucoesView.view];
+    [self addChildViewController:solucoesView];
+    [solucoesView didMoveToParentViewController:self];
 }
 
 - (IBAction)showOrdenarActionSheet:(id)sender {
@@ -105,6 +101,7 @@ UIButton *imagemCurtir;
     }
     
 }
+
 - (IBAction)showFiltrarPorArea:(id)sender {
     [filtrarActionSheet addButtonWithTitle:@"Todos"];
     
@@ -123,6 +120,13 @@ UIButton *imagemCurtir;
     }
     
 }
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSString *param;
@@ -136,24 +140,24 @@ UIButton *imagemCurtir;
             if([[paramOrdenar lowercaseString] isEqualToString:@"ultimos inseridos"])
             {
                 if([paramFiltrar isEqualToString:@"Todos"]){
-                    listaProblema = [pa retornaProblemasAdaptadosTodos];
-                    [self mudaContainerView:listaProblema];
+                    listaSolucoes = [sa retornaSolucaoAdaptadosTodos];
+                    [self mudaContainerView:listaSolucoes];
                     paramOrdenar = param;
                     
                 }else{
-                    listaProblema = [pa retornaTodosProblemasAdaptadosAreaUltimos:paramFiltrar];
-                    [self mudaContainerView:listaProblema];
+                    listaSolucoes = [sa retornaTodosSolucoesAdaptadosAreaUltimos:paramFiltrar];
+                    [self mudaContainerView:listaSolucoes];
                     paramOrdenar = param;
                 }
             }else if([[paramOrdenar lowercaseString] isEqualToString:@"mais curtidas"])
             {
                 if([paramFiltrar isEqualToString:@"Todos"]){
-                    listaProblema = [pa retornaProblemasAdaptadosTodosPorCurtida];
-                    [self mudaContainerView:listaProblema];
+                    listaSolucoes = [sa retornaSolucoesAdaptadosTodosPorCurtida];
+                    [self mudaContainerView:listaSolucoes];
                     paramOrdenar = param;
                 }else{
-                    listaProblema = [pa retornaTodosProblemasAdaptadosAreaCurtida:paramFiltrar];
-                    [self mudaContainerView:listaProblema];
+                    listaSolucoes = [sa retornaTodosSolucoesAdaptadosAreaCurtida:paramFiltrar];
+                    [self mudaContainerView:listaSolucoes];
                     paramOrdenar = param;
                 }
             }
@@ -163,29 +167,28 @@ UIButton *imagemCurtir;
         {
             if([[paramFiltrar lowercaseString] isEqualToString:@"todos"]){
                 if([[paramOrdenar lowercaseString] isEqualToString:@"ultimos inseridos"]){
-                    listaProblema = [pa retornaProblemasAdaptadosTodos];
-                    [self mudaContainerView:listaProblema];
+                    listaSolucoes = [sa retornaSolucaoAdaptadosTodos];
+                    [self mudaContainerView:listaSolucoes];
                     paramFiltrar = param;
                     NSLog(@"fuck3");
                 }else if([[paramOrdenar lowercaseString] isEqualToString:@"mais curtidas"]){
-                    listaProblema = [pa retornaProblemasAdaptadosTodosPorCurtida];
-                    [self mudaContainerView:listaProblema];
+                    listaSolucoes = [sa retornaSolucoesAdaptadosTodosPorCurtida];
+                    [self mudaContainerView:listaSolucoes];
                     paramFiltrar = param;
                     NSLog(@"fuck2");
                 }
                 
             }else{
                 if([[paramOrdenar lowercaseString] isEqualToString:@"ultimos inseridos"]){
-                    listaProblema = [pa retornaTodosProblemasAdaptadosAreaUltimos:paramFiltrar];
-                    [self mudaContainerView:listaProblema];
+                    listaSolucoes = [sa retornaTodosSolucoesAdaptadosAreaUltimos:paramFiltrar];
+                    [self mudaContainerView:listaSolucoes];
                     paramFiltrar = param;
                     NSLog(@"fuck1");
                     
                 }else if([[paramOrdenar lowercaseString]isEqualToString:@"mais curtidas"]){
-                    listaProblema = [pa retornaTodosProblemasAdaptadosAreaCurtida:paramFiltrar];
-                    [self mudaContainerView:listaProblema];
+                    listaSolucoes = [sa retornaTodosSolucoesAdaptadosAreaCurtida:paramFiltrar];
+                    [self mudaContainerView:listaSolucoes];
                     paramFiltrar = param;
-                    NSLog(@"fuck4");
                     
                     
                 }
@@ -201,7 +204,6 @@ UIButton *imagemCurtir;
     }
     
 }
-
 
 
 @end
