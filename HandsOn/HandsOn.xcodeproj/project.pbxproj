@@ -24,10 +24,11 @@
 		DB1AF1591AD46C04003F0283 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB1AF1571AD46C04003F0283 /* LaunchScreen.xib */; };
 		DB1AF1651AD46C05003F0283 /* HandsOnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1AF1641AD46C05003F0283 /* HandsOnTests.m */; };
 		DB38A4B31AE46485007F15C2 /* BaseProblemasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB38A4B21AE46485007F15C2 /* BaseProblemasViewController.m */; };
-		DB8F1F691AD77ED00068AB46 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8F1F681AD77ED00068AB46 /* photo.png */; };
 		DB8F1F791AD807A20068AB46 /* ProblemasTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8F1F781AD807A20068AB46 /* ProblemasTableViewController.m */; };
 		DB8F1F7C1AD807F60068AB46 /* SolucoesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8F1F7B1AD807F60068AB46 /* SolucoesTableViewController.m */; };
 		DB9FA7671AE56D3C009D48D4 /* BaseSolucoesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9FA7661AE56D3C009D48D4 /* BaseSolucoesViewController.m */; };
+		DB9FA7691AE5D69E009D48D4 /* img_btnEntrar.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9FA7681AE5D69E009D48D4 /* img_btnEntrar.png */; };
+		DB9FA76D1AE5DE66009D48D4 /* img_btnCadastrar.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9FA76C1AE5DE66009D48D4 /* img_btnCadastrar.png */; };
 		DBB358F21AE1788C00F02225 /* SolucoesAdapterViewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB358F11AE1788C00F02225 /* SolucoesAdapterViewObject.m */; };
 		DBB358F51AE19EF100F02225 /* MenuLateralPrincipalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB358F41AE19EF100F02225 /* MenuLateralPrincipalTableViewController.m */; };
 		DBB359051AE20BDB00F02225 /* img_menuconfig.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB359011AE20BDB00F02225 /* img_menuconfig.png */; };
@@ -83,13 +84,14 @@
 		DB1AF1641AD46C05003F0283 /* HandsOnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandsOnTests.m; sourceTree = "<group>"; };
 		DB38A4B11AE46485007F15C2 /* BaseProblemasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseProblemasViewController.h; sourceTree = "<group>"; };
 		DB38A4B21AE46485007F15C2 /* BaseProblemasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseProblemasViewController.m; sourceTree = "<group>"; };
-		DB8F1F681AD77ED00068AB46 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
 		DB8F1F771AD807A20068AB46 /* ProblemasTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProblemasTableViewController.h; sourceTree = "<group>"; };
 		DB8F1F781AD807A20068AB46 /* ProblemasTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProblemasTableViewController.m; sourceTree = "<group>"; };
 		DB8F1F7A1AD807F60068AB46 /* SolucoesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SolucoesTableViewController.h; sourceTree = "<group>"; };
 		DB8F1F7B1AD807F60068AB46 /* SolucoesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolucoesTableViewController.m; sourceTree = "<group>"; };
 		DB9FA7651AE56D3C009D48D4 /* BaseSolucoesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSolucoesViewController.h; sourceTree = "<group>"; };
 		DB9FA7661AE56D3C009D48D4 /* BaseSolucoesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSolucoesViewController.m; sourceTree = "<group>"; };
+		DB9FA7681AE5D69E009D48D4 /* img_btnEntrar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_btnEntrar.png; sourceTree = "<group>"; };
+		DB9FA76C1AE5DE66009D48D4 /* img_btnCadastrar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_btnCadastrar.png; sourceTree = "<group>"; };
 		DBB358F01AE1788C00F02225 /* SolucoesAdapterViewObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SolucoesAdapterViewObject.h; sourceTree = "<group>"; };
 		DBB358F11AE1788C00F02225 /* SolucoesAdapterViewObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolucoesAdapterViewObject.m; sourceTree = "<group>"; };
 		DBB358F31AE19EF100F02225 /* MenuLateralPrincipalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuLateralPrincipalTableViewController.h; sourceTree = "<group>"; };
@@ -233,10 +235,27 @@
 		DB8F1F6A1AD77ED70068AB46 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				DB9FA76B1AE5DE51009D48D4 /* telaCadastro */,
+				DB9FA76A1AE5D6A5009D48D4 /* telaLogin */,
 				DBB358F61AE1E81300F02225 /* menuPrincipal */,
-				DB8F1F681AD77ED00068AB46 /* photo.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		DB9FA76A1AE5D6A5009D48D4 /* telaLogin */ = {
+			isa = PBXGroup;
+			children = (
+				DB9FA7681AE5D69E009D48D4 /* img_btnEntrar.png */,
+			);
+			name = telaLogin;
+			sourceTree = "<group>";
+		};
+		DB9FA76B1AE5DE51009D48D4 /* telaCadastro */ = {
+			isa = PBXGroup;
+			children = (
+				DB9FA76C1AE5DE66009D48D4 /* img_btnCadastrar.png */,
+			);
+			name = telaCadastro;
 			sourceTree = "<group>";
 		};
 		DBB358F61AE1E81300F02225 /* menuPrincipal */ = {
@@ -333,13 +352,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB8F1F691AD77ED00068AB46 /* photo.png in Resources */,
 				DBB3590C1AE2139D00F02225 /* img_curtirInativo.png in Resources */,
 				DB1AF1541AD46C04003F0283 /* Main.storyboard in Resources */,
 				DBB359071AE20BDB00F02225 /* img_menuproblemas.png in Resources */,
+				DB9FA7691AE5D69E009D48D4 /* img_btnEntrar.png in Resources */,
 				DBB359061AE20BDB00F02225 /* img_menupessoal.png in Resources */,
 				DB1AF1591AD46C04003F0283 /* LaunchScreen.xib in Resources */,
 				DBB359081AE20BDB00F02225 /* img_menusolucoes.png in Resources */,
+				DB9FA76D1AE5DE66009D48D4 /* img_btnCadastrar.png in Resources */,
 				DBB359051AE20BDB00F02225 /* img_menuconfig.png in Resources */,
 				DB1AF1561AD46C04003F0283 /* Images.xcassets in Resources */,
 				DBB3590B1AE2139D00F02225 /* img_curtirAtivo.png in Resources */,

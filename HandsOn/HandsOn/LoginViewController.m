@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "Usuario.h"
 #import "ProblemasTableViewController.h"
+#import "CadastroViewController.h"
 
 
 @interface LoginViewController ()
@@ -17,17 +18,29 @@
 
 @implementation LoginViewController
 
+CGPoint pontoScroll;
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    pontoScroll = self.scrollLogin.contentOffset;
     // Do any additional setup after loading the view.
     
     self.labelCadastroNaoExistente.hidden = true;
     
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.txtEmail resignFirstResponder];
+    [self.txtSenha resignFirstResponder];
+    [self.scrollLogin setContentOffset:pontoScroll animated:YES];
 }
 
 /*
@@ -41,10 +54,18 @@
 */
 
 
-- (IBAction)eventNaoTenhoCadastro:(id)sender {
+- (IBAction)txtEditBegin:(id)sender {
+    CGPoint p = pontoScroll;
+    p.y += 100;
+    [self.scrollLogin setContentOffset:p animated:YES];
+    
 
     
+    
 }
+
+
+
 
 - (IBAction)eventEntrar:(id)sender {
     Usuario *u = [[Usuario alloc] init];
@@ -62,5 +83,13 @@
         
         NSLog(@"Usuario nao encontrado");
     }
+}
+
+- (IBAction)eventClick_NaoTenhoCadastro:(id)sender {
+    NSLog(@"fuck");
+    UIStoryboard * tela = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    LoginViewController * view = [tela instantiateViewControllerWithIdentifier:@"idNavCadastroViewController"];
+    view.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self presentViewController:view animated:YES completion:nil];
 }
 @end

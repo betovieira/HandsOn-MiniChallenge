@@ -14,9 +14,11 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnEntrar;
 @property (strong, nonatomic) IBOutlet UILabel *labelCadastroNaoExistente;
 
-- (IBAction)eventNaoTenhoCadastro:(id)sender;
 
 - (IBAction)eventEntrar:(id)sender;
 
+- (IBAction)eventClick_NaoTenhoCadastro:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollLogin;
 
 @end

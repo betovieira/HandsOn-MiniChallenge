@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *txtCurso;
 @property (strong, nonatomic) IBOutlet UITextField *txtHabilidades;
 @property (strong, nonatomic) IBOutlet UILabel *txtStatus;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollViewForm;
 
 - (bool) verificaValido:(NSString *)str;
 - (IBAction)eventCadastrar:(id)sender;
