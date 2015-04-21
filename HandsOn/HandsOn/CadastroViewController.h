@@ -19,5 +19,6 @@
 
 - (bool) verificaValido:(NSString *)str;
 - (IBAction)eventCadastrar:(id)sender;
-
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+- (IBAction)txtEditBegin:(id)sender;
 @end

@@ -10,10 +10,13 @@
 #import "Usuario.h"
 
 @interface CadastroViewController ()
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollViewCadastro;
 - (bool) verificaValido:(NSString *)str;
 @end
 
 @implementation CadastroViewController
+
+CGPoint pontoScroll;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,15 +30,22 @@
 
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.txtEmail resignFirstResponder];
+    [self.txtSenha resignFirstResponder];
+    [self.txtUsuario resignFirstResponder];
+    [self.txtCurso resignFirstResponder];
+    [self.txtHabilidades resignFirstResponder];
+    [self.scrollViewCadastro setContentOffset:pontoScroll animated:YES];
 }
-*/
+
+- (IBAction)txtEditBegin:(id)sender {
+    CGPoint p = pontoScroll;
+    p.y += 100;
+    [self.scrollViewCadastro setContentOffset:p animated:YES];
+    
+}
+
 
 - (IBAction)eventCadastrar:(id)sender {
     Usuario *u = [[Usuario alloc]init];

@@ -59,9 +59,6 @@ CGPoint pontoScroll;
     p.y += 100;
     [self.scrollLogin setContentOffset:p animated:YES];
     
-
-    
-    
 }
 
 
