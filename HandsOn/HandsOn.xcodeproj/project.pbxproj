@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A00E4DA61AE80D36008C851E /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00E4DA51AE80D36008C851E /* ConfigViewController.m */; };
 		A05F43611AD5A88B00903CD0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05F43601AD5A88B00903CD0 /* LoginViewController.m */; };
 		A0A013A71AD5BA610066AAAC /* CadastroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A013A61AD5BA610066AAAC /* CadastroViewController.m */; };
 		A0A013AA1AD5D2FE0066AAAC /* TelaBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A013A91AD5D2FE0066AAAC /* TelaBaseViewController.m */; };
@@ -22,7 +23,6 @@
 		DB1AF1541AD46C04003F0283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1AF1521AD46C04003F0283 /* Main.storyboard */; };
 		DB1AF1561AD46C04003F0283 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1AF1551AD46C04003F0283 /* Images.xcassets */; };
 		DB1AF1591AD46C04003F0283 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB1AF1571AD46C04003F0283 /* LaunchScreen.xib */; };
-		DB1AF1651AD46C05003F0283 /* HandsOnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1AF1641AD46C05003F0283 /* HandsOnTests.m */; };
 		DB38A4B31AE46485007F15C2 /* BaseProblemasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB38A4B21AE46485007F15C2 /* BaseProblemasViewController.m */; };
 		DB8F1F791AD807A20068AB46 /* ProblemasTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8F1F781AD807A20068AB46 /* ProblemasTableViewController.m */; };
 		DB8F1F7C1AD807F60068AB46 /* SolucoesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8F1F7B1AD807F60068AB46 /* SolucoesTableViewController.m */; };
@@ -51,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A00E4DA41AE80D36008C851E /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		A00E4DA51AE80D36008C851E /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
 		A05F435F1AD5A88B00903CD0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		A05F43601AD5A88B00903CD0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		A0A013A51AD5BA610066AAAC /* CadastroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CadastroViewController.h; sourceTree = "<group>"; };
@@ -80,8 +82,6 @@
 		DB1AF1551AD46C04003F0283 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DB1AF1581AD46C04003F0283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DB1AF15E1AD46C05003F0283 /* HandsOnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandsOnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB1AF1631AD46C05003F0283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB1AF1641AD46C05003F0283 /* HandsOnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandsOnTests.m; sourceTree = "<group>"; };
 		DB38A4B11AE46485007F15C2 /* BaseProblemasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseProblemasViewController.h; sourceTree = "<group>"; };
 		DB38A4B21AE46485007F15C2 /* BaseProblemasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseProblemasViewController.m; sourceTree = "<group>"; };
 		DB8F1F771AD807A20068AB46 /* ProblemasTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProblemasTableViewController.h; sourceTree = "<group>"; };
@@ -145,6 +145,8 @@
 				DB38A4B21AE46485007F15C2 /* BaseProblemasViewController.m */,
 				DB9FA7651AE56D3C009D48D4 /* BaseSolucoesViewController.h */,
 				DB9FA7661AE56D3C009D48D4 /* BaseSolucoesViewController.m */,
+				A00E4DA41AE80D36008C851E /* ConfigViewController.h */,
+				A00E4DA51AE80D36008C851E /* ConfigViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -153,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				DB1AF1471AD46C04003F0283 /* HandsOn */,
-				DB1AF1611AD46C05003F0283 /* HandsOnTests */,
 				DB1AF1461AD46C04003F0283 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -188,23 +189,6 @@
 			children = (
 				DB1AF1491AD46C04003F0283 /* Info.plist */,
 				DB1AF14A1AD46C04003F0283 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		DB1AF1611AD46C05003F0283 /* HandsOnTests */ = {
-			isa = PBXGroup;
-			children = (
-				DB1AF1641AD46C05003F0283 /* HandsOnTests.m */,
-				DB1AF1621AD46C05003F0283 /* Supporting Files */,
-			);
-			path = HandsOnTests;
-			sourceTree = "<group>";
-		};
-		DB1AF1621AD46C05003F0283 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				DB1AF1631AD46C05003F0283 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -320,7 +304,7 @@
 				TargetAttributes = {
 					DB1AF1441AD46C04003F0283 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 7SCH5Y74F7;
+						DevelopmentTeam = Y8N79BENX2;
 					};
 					DB1AF15D1AD46C05003F0283 = {
 						CreatedOnToolsVersion = 6.2;
@@ -382,6 +366,7 @@
 			files = (
 				DB0924531AE0500F003EDCC3 /* ProblemasAdapterViewObject.m in Sources */,
 				A0B8D4DE1AD59F4000E0A8D7 /* Area.m in Sources */,
+				A00E4DA61AE80D36008C851E /* ConfigViewController.m in Sources */,
 				A0A013AA1AD5D2FE0066AAAC /* TelaBaseViewController.m in Sources */,
 				A0B8D4E71AD5A1C500E0A8D7 /* Implementacao.m in Sources */,
 				DBE824601AD59C7C006065D4 /* Usuario.m in Sources */,
@@ -406,7 +391,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB1AF1651AD46C05003F0283 /* HandsOnTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -509,7 +493,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -520,9 +504,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HandsOn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -534,9 +518,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HandsOn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -559,6 +543,7 @@
 				INFOPLIST_FILE = HandsOnTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HandsOn.app/HandsOn";
 			};
 			name = Debug;
@@ -574,6 +559,7 @@
 				INFOPLIST_FILE = HandsOnTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HandsOn.app/HandsOn";
 			};
 			name = Release;

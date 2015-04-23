@@ -41,7 +41,7 @@ CGPoint pontoScroll;
 
 - (IBAction)txtEditBegin:(id)sender {
     CGPoint p = pontoScroll;
-    p.y += 100;
+    p.y += 125;
     [self.scrollViewCadastro setContentOffset:p animated:YES];
     
 }
