@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface NovoProblemaViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnArea;
+
 @property (weak, nonatomic) IBOutlet UITextView *descricaoTxt;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollViewNovoProblema;
 
-
+- (IBAction)showActionArea:(id)sender;
 
 @end

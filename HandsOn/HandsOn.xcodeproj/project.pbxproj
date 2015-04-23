@@ -314,7 +314,7 @@
 				TargetAttributes = {
 					DB1AF1441AD46C04003F0283 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = Y8N79BENX2;
+						DevelopmentTeam = 7SCH5Y74F7;
 					};
 					DB1AF15D1AD46C05003F0283 = {
 						CreatedOnToolsVersion = 6.2;
@@ -516,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HandsOn/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
@@ -530,6 +531,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HandsOn/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;

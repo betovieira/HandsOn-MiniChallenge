@@ -20,10 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [_infoLabelVideo setFont:[UIFont systemFontOfSize:15]];
-    [_infoLabelAnexo setFont:[UIFont systemFontOfSize:15]];
-    [_infoLabelHabilidades setFont:[UIFont systemFontOfSize:15]];
-    
+//    [_infoLabelVideo setFont:[UIFont systemFontOfSize:15]];
+//    [_infoLabelAnexo setFont:[UIFont systemFontOfSize:15]];
+//    [_infoLabelHabilidades setFont:[UIFont systemFontOfSize:15]];
+//    
     self.descricaoTxt.layer.borderWidth = 0.5f;
     self.descricaoTxt.layer.borderColor = [[UIColor grayColor] CGColor];
 

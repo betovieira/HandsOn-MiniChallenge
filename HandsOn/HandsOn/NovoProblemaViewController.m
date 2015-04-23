@@ -7,18 +7,36 @@
 //
 
 #import "NovoProblemaViewController.h"
+#import "Area.h"
 
-@interface NovoProblemaViewController ()
+@interface NovoProblemaViewController () <UIActionSheetDelegate>
+
 
 @end
 
 @implementation NovoProblemaViewController
 
+Area *a;
+NSMutableArray *listaAreas;
+UIActionSheet *filtrarActionSheet;
+
 - (void)viewDidLoad {
-    [_infoLabel setFont:[UIFont systemFontOfSize:15]];
+    [super viewDidLoad];
+    
+    a = [[Area alloc] init];
+    listaAreas = [a retornaAreasTodas];
+    
+    filtrarActionSheet = [[UIActionSheet alloc] initWithTitle:@"Area"
+                                                     delegate:self
+                                            cancelButtonTitle:nil
+                                       destructiveButtonTitle:nil
+                                            otherButtonTitles:nil];
+    
+
+    
     self.descricaoTxt.layer.borderWidth = 0.5f;
     self.descricaoTxt.layer.borderColor = [[UIColor grayColor] CGColor];
-    [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -27,14 +45,34 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)showFiltrarPorArea:(id)sender {
+    
+    for(Area * a in listaAreas)
+        [filtrarActionSheet addButtonWithTitle:a.nomeArea];
+    
+    //Se for iPad
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        [filtrarActionSheet showFromBarButtonItem:(UIBarButtonItem *)sender animated:YES];
+        //Se for iPhone
+    }else{
+        [filtrarActionSheet showInView:self.view];
+    }
+    
 }
-*/
-
+- (IBAction)showActionArea:(id)sender {
+    
+    for(Area * a in listaAreas)
+        [filtrarActionSheet addButtonWithTitle:a.nomeArea];
+    
+    //Se for iPad
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        [filtrarActionSheet showFromBarButtonItem:(UIBarButtonItem *)sender animated:YES];
+        //Se for iPhone
+    }else{
+        [filtrarActionSheet showInView:self.view];
+    }
+}
 @end
