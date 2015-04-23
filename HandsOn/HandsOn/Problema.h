@@ -21,6 +21,7 @@
 - (NSMutableArray *) retornaProblemasTodos;
 - (NSMutableArray *) retornaProblemasTodosAreaUltimos: (NSString *)strArea;
 - (int) retornaQuantidadeDeSolucoes: (int) id_problema;
+-(bool) cadastroProblema :(Problema *)p;
 
 - (NSMutableArray *) retornaProblemasArea: (Area *)a;
 - (NSMutableArray *) retornaProblemasCurtidos;

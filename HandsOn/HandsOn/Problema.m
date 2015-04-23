@@ -85,6 +85,44 @@
     
     return retorno;
 }
+
+
+-(bool) cadastroProblema :(Problema *)p
+{
+    
+    @try {
+        NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://betovieira.com.br/handson/inseredados.php"]];
+        
+        [urlRequest setHTTPMethod:@"POST"];
+        
+        NSString *postString = [NSString stringWithFormat:@"tipo_operacao=2&id_usuario=%d&id_area=%d&descricaoProblema=%@", p.id_usuario, p.id_area, p.descricaoProblema];
+        
+        [urlRequest setValue:[NSString stringWithFormat:@"%lu", (unsigned long) [postString length]] forHTTPHeaderField:@"Content-length"];
+        
+        [urlRequest setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
+        
+        NSURLConnection *c = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
+        NSData *response = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:nil];
+        NSArray *separaObjetos = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
+        NSDictionary *separaAtributos = [separaObjetos objectAtIndex:0];
+        
+        NSString *retorno = [separaAtributos objectForKey:@"retorno"];
+        
+        NSLog(@"D: %@", retorno);
+        
+        return [[separaAtributos objectForKey:@"retorno"] boolValue];
+        
+    }
+    @catch(NSException *e)
+    {
+        return false;
+    }
+    
+}
+
+
+
+
 /*USANDO*/
 
 - (NSMutableArray *) retornaProblemasArea: (Area *)a
