@@ -16,12 +16,12 @@
 @property (strong, nonatomic) IBOutlet UITextField *novasHabilidades;
 @property (strong, nonatomic) IBOutlet UITextField *novaSenha;
 @property (strong, nonatomic) IBOutlet UITextField *confirmaNovaSenha;
-@property (strong, nonatomic) IBOutlet UIImageView *novaFoto;
+@property (strong, nonatomic) IBOutlet UIButton *novaFoto;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollViewForm;
 
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 - (IBAction)txtEditBegin:(id)sender;
-
+- (IBAction) txtEditEnd:(id)sender;
 @end
 

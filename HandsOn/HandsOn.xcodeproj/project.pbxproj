@@ -15,6 +15,8 @@
 		A0B8D4E11AD59FA600E0A8D7 /* Problema.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B8D4E01AD59FA600E0A8D7 /* Problema.m */; };
 		A0B8D4E41AD5A08000E0A8D7 /* Solucao.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B8D4E31AD5A08000E0A8D7 /* Solucao.m */; };
 		A0B8D4E71AD5A1C500E0A8D7 /* Implementacao.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B8D4E61AD5A1C500E0A8D7 /* Implementacao.m */; };
+		A0EF3E1C1AE96974009A3E80 /* NovoProblemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EF3E1B1AE96974009A3E80 /* NovoProblemaViewController.m */; };
+		A0EF3E1F1AE96D20009A3E80 /* NovaSolucaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EF3E1E1AE96D20009A3E80 /* NovaSolucaoViewController.m */; };
 		DB09244A1ADD5A66003EDCC3 /* BancoDadosHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0924491ADD5A66003EDCC3 /* BancoDadosHelper.m */; };
 		DB0924501ADEE1F7003EDCC3 /* MenuPrincipalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB09244F1ADEE1F7003EDCC3 /* MenuPrincipalViewController.m */; };
 		DB0924531AE0500F003EDCC3 /* ProblemasAdapterViewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0924521AE0500F003EDCC3 /* ProblemasAdapterViewObject.m */; };
@@ -67,6 +69,10 @@
 		A0B8D4E31AD5A08000E0A8D7 /* Solucao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Solucao.m; sourceTree = "<group>"; };
 		A0B8D4E51AD5A1C500E0A8D7 /* Implementacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Implementacao.h; sourceTree = "<group>"; };
 		A0B8D4E61AD5A1C500E0A8D7 /* Implementacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Implementacao.m; sourceTree = "<group>"; };
+		A0EF3E1A1AE96974009A3E80 /* NovoProblemaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NovoProblemaViewController.h; sourceTree = "<group>"; };
+		A0EF3E1B1AE96974009A3E80 /* NovoProblemaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NovoProblemaViewController.m; sourceTree = "<group>"; };
+		A0EF3E1D1AE96D20009A3E80 /* NovaSolucaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NovaSolucaoViewController.h; sourceTree = "<group>"; };
+		A0EF3E1E1AE96D20009A3E80 /* NovaSolucaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NovaSolucaoViewController.m; sourceTree = "<group>"; };
 		DB0924481ADD5A66003EDCC3 /* BancoDadosHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BancoDadosHelper.h; sourceTree = "<group>"; };
 		DB0924491ADD5A66003EDCC3 /* BancoDadosHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BancoDadosHelper.m; sourceTree = "<group>"; };
 		DB09244E1ADEE1F7003EDCC3 /* MenuPrincipalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuPrincipalViewController.h; sourceTree = "<group>"; };
@@ -147,6 +153,10 @@
 				DB9FA7661AE56D3C009D48D4 /* BaseSolucoesViewController.m */,
 				A00E4DA41AE80D36008C851E /* ConfigViewController.h */,
 				A00E4DA51AE80D36008C851E /* ConfigViewController.m */,
+				A0EF3E1A1AE96974009A3E80 /* NovoProblemaViewController.h */,
+				A0EF3E1B1AE96974009A3E80 /* NovoProblemaViewController.m */,
+				A0EF3E1D1AE96D20009A3E80 /* NovaSolucaoViewController.h */,
+				A0EF3E1E1AE96D20009A3E80 /* NovaSolucaoViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -367,6 +377,7 @@
 				DB0924531AE0500F003EDCC3 /* ProblemasAdapterViewObject.m in Sources */,
 				A0B8D4DE1AD59F4000E0A8D7 /* Area.m in Sources */,
 				A00E4DA61AE80D36008C851E /* ConfigViewController.m in Sources */,
+				A0EF3E1C1AE96974009A3E80 /* NovoProblemaViewController.m in Sources */,
 				A0A013AA1AD5D2FE0066AAAC /* TelaBaseViewController.m in Sources */,
 				A0B8D4E71AD5A1C500E0A8D7 /* Implementacao.m in Sources */,
 				DBE824601AD59C7C006065D4 /* Usuario.m in Sources */,
@@ -380,6 +391,7 @@
 				DB09244A1ADD5A66003EDCC3 /* BancoDadosHelper.m in Sources */,
 				DB8F1F791AD807A20068AB46 /* ProblemasTableViewController.m in Sources */,
 				DB1AF14B1AD46C04003F0283 /* main.m in Sources */,
+				A0EF3E1F1AE96D20009A3E80 /* NovaSolucaoViewController.m in Sources */,
 				A0A013A71AD5BA610066AAAC /* CadastroViewController.m in Sources */,
 				DB8F1F7C1AD807F60068AB46 /* SolucoesTableViewController.m in Sources */,
 				DBB358F51AE19EF100F02225 /* MenuLateralPrincipalTableViewController.m in Sources */,

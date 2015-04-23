@@ -20,8 +20,9 @@ CGPoint pontoScroll;
 
 - (IBAction)mudaFoto:(id)sender {
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    //imagePicker.delegate = self;
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.delegate = self;
+    [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
 - (void)viewDidLoad {
@@ -52,7 +53,11 @@ CGPoint pontoScroll;
     
 }
 
-
+- (IBAction)txtEditEnd:(id)sender{
+    CGPoint p = pontoScroll;
+    p.y -= 0;
+    [self.scrollViewConfig setContentOffset:p animated:YES];
+}
 
 /*
 #pragma mark - Navigation
