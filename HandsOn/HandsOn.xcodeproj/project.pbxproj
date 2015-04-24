@@ -26,6 +26,12 @@
 		DB1AF1561AD46C04003F0283 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1AF1551AD46C04003F0283 /* Images.xcassets */; };
 		DB1AF1591AD46C04003F0283 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB1AF1571AD46C04003F0283 /* LaunchScreen.xib */; };
 		DB38A4B31AE46485007F15C2 /* BaseProblemasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB38A4B21AE46485007F15C2 /* BaseProblemasViewController.m */; };
+		DB48A3931AEA1E950095294B /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = DB48A3921AEA1E950095294B /* iTunesArtwork.png */; };
+		DB48A3961AEA1F850095294B /* img_tag.png in Resources */ = {isa = PBXBuildFile; fileRef = DB48A3941AEA1F850095294B /* img_tag.png */; };
+		DB48A3971AEA1F850095294B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DB48A3951AEA1F850095294B /* logo.png */; };
+		DB48A39A1AEA22B50095294B /* DetalheProblemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB48A3991AEA22B50095294B /* DetalheProblemaViewController.m */; };
+		DB48A3A31AEA2DA80095294B /* DetalheProblemaContainer1TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB48A3A21AEA2DA80095294B /* DetalheProblemaContainer1TableView.m */; };
+		DB48A3A61AEA2DCB0095294B /* DetalheProblemaContainer2TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB48A3A51AEA2DCB0095294B /* DetalheProblemaContainer2TableView.m */; };
 		DB8F1F791AD807A20068AB46 /* ProblemasTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8F1F781AD807A20068AB46 /* ProblemasTableViewController.m */; };
 		DB8F1F7C1AD807F60068AB46 /* SolucoesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8F1F7B1AD807F60068AB46 /* SolucoesTableViewController.m */; };
 		DB9FA7671AE56D3C009D48D4 /* BaseSolucoesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9FA7661AE56D3C009D48D4 /* BaseSolucoesViewController.m */; };
@@ -90,6 +96,15 @@
 		DB1AF15E1AD46C05003F0283 /* HandsOnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandsOnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB38A4B11AE46485007F15C2 /* BaseProblemasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseProblemasViewController.h; sourceTree = "<group>"; };
 		DB38A4B21AE46485007F15C2 /* BaseProblemasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseProblemasViewController.m; sourceTree = "<group>"; };
+		DB48A3921AEA1E950095294B /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		DB48A3941AEA1F850095294B /* img_tag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_tag.png; sourceTree = "<group>"; };
+		DB48A3951AEA1F850095294B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		DB48A3981AEA22B50095294B /* DetalheProblemaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalheProblemaViewController.h; sourceTree = "<group>"; };
+		DB48A3991AEA22B50095294B /* DetalheProblemaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalheProblemaViewController.m; sourceTree = "<group>"; };
+		DB48A3A11AEA2DA80095294B /* DetalheProblemaContainer1TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalheProblemaContainer1TableView.h; sourceTree = "<group>"; };
+		DB48A3A21AEA2DA80095294B /* DetalheProblemaContainer1TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalheProblemaContainer1TableView.m; sourceTree = "<group>"; };
+		DB48A3A41AEA2DCB0095294B /* DetalheProblemaContainer2TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalheProblemaContainer2TableView.h; sourceTree = "<group>"; };
+		DB48A3A51AEA2DCB0095294B /* DetalheProblemaContainer2TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalheProblemaContainer2TableView.m; sourceTree = "<group>"; };
 		DB8F1F771AD807A20068AB46 /* ProblemasTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProblemasTableViewController.h; sourceTree = "<group>"; };
 		DB8F1F781AD807A20068AB46 /* ProblemasTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProblemasTableViewController.m; sourceTree = "<group>"; };
 		DB8F1F7A1AD807F60068AB46 /* SolucoesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SolucoesTableViewController.h; sourceTree = "<group>"; };
@@ -157,6 +172,12 @@
 				A0EF3E1B1AE96974009A3E80 /* NovoProblemaViewController.m */,
 				A0EF3E1D1AE96D20009A3E80 /* NovaSolucaoViewController.h */,
 				A0EF3E1E1AE96D20009A3E80 /* NovaSolucaoViewController.m */,
+				DB48A3981AEA22B50095294B /* DetalheProblemaViewController.h */,
+				DB48A3991AEA22B50095294B /* DetalheProblemaViewController.m */,
+				DB48A3A11AEA2DA80095294B /* DetalheProblemaContainer1TableView.h */,
+				DB48A3A21AEA2DA80095294B /* DetalheProblemaContainer1TableView.m */,
+				DB48A3A41AEA2DCB0095294B /* DetalheProblemaContainer2TableView.h */,
+				DB48A3A51AEA2DCB0095294B /* DetalheProblemaContainer2TableView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -239,6 +260,9 @@
 		DB9FA76A1AE5D6A5009D48D4 /* telaLogin */ = {
 			isa = PBXGroup;
 			children = (
+				DB48A3941AEA1F850095294B /* img_tag.png */,
+				DB48A3951AEA1F850095294B /* logo.png */,
+				DB48A3921AEA1E950095294B /* iTunesArtwork.png */,
 				DB9FA7681AE5D69E009D48D4 /* img_btnEntrar.png */,
 			);
 			name = telaLogin;
@@ -350,12 +374,15 @@
 				DB1AF1541AD46C04003F0283 /* Main.storyboard in Resources */,
 				DBB359071AE20BDB00F02225 /* img_menuproblemas.png in Resources */,
 				DB9FA7691AE5D69E009D48D4 /* img_btnEntrar.png in Resources */,
+				DB48A3971AEA1F850095294B /* logo.png in Resources */,
 				DBB359061AE20BDB00F02225 /* img_menupessoal.png in Resources */,
 				DB1AF1591AD46C04003F0283 /* LaunchScreen.xib in Resources */,
+				DB48A3931AEA1E950095294B /* iTunesArtwork.png in Resources */,
 				DBB359081AE20BDB00F02225 /* img_menusolucoes.png in Resources */,
 				DB9FA76D1AE5DE66009D48D4 /* img_btnCadastrar.png in Resources */,
 				DBB359051AE20BDB00F02225 /* img_menuconfig.png in Resources */,
 				DB1AF1561AD46C04003F0283 /* Images.xcassets in Resources */,
+				DB48A3961AEA1F850095294B /* img_tag.png in Resources */,
 				DBB3590B1AE2139D00F02225 /* img_curtirAtivo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,10 +415,13 @@
 				A0B8D4E41AD5A08000E0A8D7 /* Solucao.m in Sources */,
 				DB1AF14E1AD46C04003F0283 /* AppDelegate.m in Sources */,
 				DB38A4B31AE46485007F15C2 /* BaseProblemasViewController.m in Sources */,
+				DB48A3A61AEA2DCB0095294B /* DetalheProblemaContainer2TableView.m in Sources */,
 				DB09244A1ADD5A66003EDCC3 /* BancoDadosHelper.m in Sources */,
+				DB48A3A31AEA2DA80095294B /* DetalheProblemaContainer1TableView.m in Sources */,
 				DB8F1F791AD807A20068AB46 /* ProblemasTableViewController.m in Sources */,
 				DB1AF14B1AD46C04003F0283 /* main.m in Sources */,
 				A0EF3E1F1AE96D20009A3E80 /* NovaSolucaoViewController.m in Sources */,
+				DB48A39A1AEA22B50095294B /* DetalheProblemaViewController.m in Sources */,
 				A0A013A71AD5BA610066AAAC /* CadastroViewController.m in Sources */,
 				DB8F1F7C1AD807F60068AB46 /* SolucoesTableViewController.m in Sources */,
 				DBB358F51AE19EF100F02225 /* MenuLateralPrincipalTableViewController.m in Sources */,

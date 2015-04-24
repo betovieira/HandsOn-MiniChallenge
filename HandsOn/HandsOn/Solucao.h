@@ -16,9 +16,15 @@
 @property (nonatomic) int id_area;
 @property (nonatomic) NSString *descricaoSolucao;
 @property (nonatomic) NSString *caminhoAnexoSolucao;
+
+@property (nonatomic) NSString *descricaoTotalSolucao;
+@property (nonatomic) NSString *caminhoLink;
+
 @property (nonatomic) NSString *interesses;
 @property (nonatomic) int curtidasSolucao;
 
+
+-(bool) cadastroSolucao :(Solucao *)s;
 -(NSMutableArray *) retornaSolucoes;
 -(NSMutableArray *) retornaSolucoesPorID: (Solucao *)s;
 -(NSMutableArray *) retornaSolucoesPorArea: (Area *)a;

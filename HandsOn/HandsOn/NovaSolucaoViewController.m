@@ -7,28 +7,22 @@
 //
 
 #import "NovaSolucaoViewController.h"
+#import "Solucao.h"
+
 
 @interface NovaSolucaoViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *infoLabelVideo;
-@property (weak, nonatomic) IBOutlet UILabel *infoLabelAnexo;
-@property (weak, nonatomic) IBOutlet UILabel *infoLabelHabilidades;
-
 @end
 
 @implementation NovaSolucaoViewController
 
+CGPoint pontoScroll;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [_infoLabelVideo setFont:[UIFont systemFontOfSize:15]];
-//    [_infoLabelAnexo setFont:[UIFont systemFontOfSize:15]];
-//    [_infoLabelHabilidades setFont:[UIFont systemFontOfSize:15]];
-//    
-    self.descricaoTxt.layer.borderWidth = 0.5f;
-    self.descricaoTxt.layer.borderColor = [[UIColor grayColor] CGColor];
-
   
-    
+    self.txtDescricao.layer.borderWidth = 0.5f;
+    self.txtDescricao.layer.borderColor = [[UIColor grayColor] CGColor];
 
     // Do any additional setup after loading the view.
 }
@@ -38,14 +32,39 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.txtTitulo resignFirstResponder];
+    [self.txtAnexo resignFirstResponder];
+    [self.txtLinkVideo resignFirstResponder];
+    [self.txtHabilidades resignFirstResponder];
+    [self.txtDescricao resignFirstResponder];
+    
+    [self.scrollView setContentOffset:pontoScroll animated:YES];
 }
-*/
 
+- (IBAction)txtEditBegin:(id)sender {
+    CGPoint p = pontoScroll;
+    p.y += 150;
+    [self.scrollView setContentOffset:p animated:YES];
+    
+}
+
+
+- (IBAction)eventCadastrar:(id)sender {
+    Solucao *s = [[Solucao alloc]init];
+    s.id_problema = 12; // User Default
+    s.id_area = 1; // User Default
+    s.descricaoSolucao = self.txtTitulo.text;
+    s.caminhoAnexoSolucao = self.txtAnexo.text;
+    s.descricaoTotalSolucao = self.txtDescricao.text;
+    s.caminhoLink = self.txtLinkVideo.text;
+    s.interesses = self.txtHabilidades.text;
+    s.curtidasSolucao = 0;
+    
+    if ([s cadastroSolucao:s]) {
+        NSLog(@"Foi carai");
+    }else {
+        NSLog(@"Nao foi");
+    }
+}
 @end

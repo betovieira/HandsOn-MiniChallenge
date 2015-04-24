@@ -9,11 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface NovaSolucaoViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextView *descricaoTxt;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
+@property (strong, nonatomic) IBOutlet UITextField *txtTitulo;
+@property (strong, nonatomic) IBOutlet UITextField *txtLinkVideo;
+@property (strong, nonatomic) IBOutlet UITextField *txtAnexo;
+@property (strong, nonatomic) IBOutlet UITextField *txtHabilidades;
+@property (weak, nonatomic) IBOutlet UITextView *txtDescricao;
 
 //- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+- (IBAction)eventCadastrar:(id)sender;
 
 //- (IBAction) txtEditBegi:(id)sender;
 //- (IBAction) txtEditEnd: (id)sender;

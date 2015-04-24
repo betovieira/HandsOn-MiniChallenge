@@ -161,6 +161,8 @@ UIButton *imagemCurtir;
         
         if(actionSheet == filtrarActionSheet)
         {
+            paramFiltrar = param;
+            
             if([[paramFiltrar lowercaseString] isEqualToString:@"todos"]){
                 if([[paramOrdenar lowercaseString] isEqualToString:@"ultimos inseridos"]){
                     listaProblema = [pa retornaProblemasAdaptadosTodos];

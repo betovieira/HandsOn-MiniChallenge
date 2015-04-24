@@ -32,6 +32,9 @@
         p.id_usuario = [[separaAtributos objectForKey:@"id_usuario"] intValue];
         p.id_area = [[separaAtributos objectForKey:@"id_area"] intValue];
         p.descricaoProblema = [separaAtributos objectForKey:@"descricaoProblema"];
+        p.descricaoTotalProblema = [separaAtributos objectForKey:@"descricaoTotalProblema"];
+        
+        p.caminhoLink = [separaAtributos objectForKey:@"caminhoLink"];
         p.curtidasProblema = [[separaAtributos objectForKey:@"curtidasProblema"] intValue];
         
         [listaProblemasTodos addObject:p];
@@ -61,6 +64,8 @@
         p.id_usuario = [[separaAtributos objectForKey:@"id_usuario"] intValue];
         p.id_area = [[separaAtributos objectForKey:@"id_area"] intValue];
         p.descricaoProblema = [separaAtributos objectForKey:@"descricaoProblema"];
+        p.descricaoTotalProblema = [separaAtributos objectForKey:@"descricaoTotalProblema"];
+        p.caminhoLink = [separaAtributos objectForKey:@"caminhoLink"];
         p.curtidasProblema = [[separaAtributos objectForKey:@"curtidasProblema"] intValue];
         
         [listaProblemasTodos addObject:p];
@@ -95,13 +100,13 @@
         
         [urlRequest setHTTPMethod:@"POST"];
         
-        NSString *postString = [NSString stringWithFormat:@"tipo_operacao=2&id_usuario=%d&id_area=%d&descricaoProblema=%@", p.id_usuario, p.id_area, p.descricaoProblema];
+        NSString *postString = [NSString stringWithFormat:@"tipo_operacao=2&id_usuario=%d&id_area=%d&descricaoProblema=%@&descricaoTotalProblema=%@&caminhoLink=%@", p.id_usuario, p.id_area, p.descricaoProblema, p.descricaoTotalProblema, p.caminhoLink];
         
         [urlRequest setValue:[NSString stringWithFormat:@"%lu", (unsigned long) [postString length]] forHTTPHeaderField:@"Content-length"];
         
         [urlRequest setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
         
-        NSURLConnection *c = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
+        //NSURLConnection *c = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
         NSData *response = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:nil];
         NSArray *separaObjetos = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
         NSDictionary *separaAtributos = [separaObjetos objectAtIndex:0];

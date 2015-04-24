@@ -51,20 +51,20 @@
         
         [urlRequest setHTTPMethod:@"POST"];
         
-        NSString *postString = [NSString stringWithFormat:@"tipo_operacao=4&id_problema=%d&descricaoSolucao=%@&caminhoAnexoSolucao=%@&interesse=%@&id_area%d",s.id_problema, s.descricaoSolucao, s.caminhoAnexoSolucao, s.interesses, s.id_area];
+        NSString *postString = [NSString stringWithFormat:@"tipo_operacao=4&id_problema=%d&descricaoSolucao=%@&caminhoAnexoSolucao=%@&interesse=%@&id_area=%d&descricaoTotalSolucao=%@&caminhoLink=%@",s.id_problema, s.descricaoSolucao, s.caminhoAnexoSolucao, s.interesses, s.id_area, s.descricaoTotalSolucao, s.caminhoLink];
         
         [urlRequest setValue:[NSString stringWithFormat:@"%lu", (unsigned long) [postString length]] forHTTPHeaderField:@"Content-length"];
         
         [urlRequest setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
         
-        NSURLConnection *c = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
+        //NSURLConnection *c = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
         NSData *response = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:nil];
         NSArray *separaObjetos = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
         NSDictionary *separaAtributos = [separaObjetos objectAtIndex:0];
         
         NSString *retorno = [separaAtributos objectForKey:@"retorno"];
         
-        NSLog(@"D: %@", retorno);
+        NSLog(@"S: %@", retorno);
         
         return [[separaAtributos objectForKey:@"retorno"] boolValue];
         
@@ -75,6 +75,10 @@
     }
     
 }
+
+
+
+
 
 /* USANDO */
 
@@ -99,6 +103,8 @@
         s.id_problema = [[separaAtributos objectForKey:@"id_problema"] intValue];
         s.descricaoSolucao = [separaAtributos objectForKey:@"descricaoSolucao"] ;
         s.caminhoAnexoSolucao = [separaAtributos objectForKey:@"caminhoAnexoSolucao"];
+        s.descricaoTotalSolucao = [separaAtributos objectForKey:@"descricaoTotalSolucao"];
+        s.caminhoLink = [separaAtributos objectForKey:@"caminhoLink"];
         s.interesses = [separaAtributos objectForKey:@"interesses"] ;
         s.curtidasSolucao = [[separaAtributos objectForKey:@"curtidasSolucao"] intValue];
         
@@ -132,7 +138,8 @@
         s.caminhoAnexoSolucao = [separaAtributos objectForKey:@"caminhoAnexoSolucao"];
         s.interesses = [separaAtributos objectForKey:@"interesses"] ;
         s.curtidasSolucao = [[separaAtributos objectForKey:@"curtidasSolucao"] intValue];
-        
+        s.descricaoTotalSolucao = [separaAtributos objectForKey:@"descricaoTotalSolucao"];
+        s.caminhoLink = [separaAtributos objectForKey:@"caminhoLink"];
         
         [listaSolucoesPorArea addObject:s];
     }
@@ -163,7 +170,8 @@
         s.caminhoAnexoSolucao = [separaAtributos objectForKey:@"caminhoAnexoSolucao"];
         s.interesses = [separaAtributos objectForKey:@"interesses"] ;
         s.curtidasSolucao = [[separaAtributos objectForKey:@"curtidasSolucao"] intValue];
-        
+        s.descricaoTotalSolucao = [separaAtributos objectForKey:@"descricaoTotalSolucao"];
+        s.caminhoLink = [separaAtributos objectForKey:@"caminhoLink"];
         
         [listaSolucoesCurtidas addObject:s];
     }
@@ -171,11 +179,11 @@
     return listaSolucoesCurtidas;
 }
 
-- (NSInteger*) retornaQuantidadeImplementacoes:(NSInteger *) id_sol
+- (NSInteger) retornaQuantidadeImplementacoes:(NSInteger)id_sol
 {
     NSInteger retorno = 0;
     
-    NSString *string = [NSString stringWithFormat:@"http://betovieira.com.br/handson/retornadados.php?tipo_operacao=14&id_solucao=%d",id_sol];
+    NSString *string = [NSString stringWithFormat:@"http://betovieira.com.br/handson/retornadados.php?tipo_operacao=14&id_solucao=%d",(int)id_sol];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:string]];
     
@@ -216,6 +224,8 @@
         s.caminhoAnexoSolucao = [separaAtributos objectForKey:@"caminhoAnexoSolucao"];
         s.interesses = [separaAtributos objectForKey:@"interesses"] ;
         s.curtidasSolucao = [[separaAtributos objectForKey:@"curtidasSolucao"] intValue];
+        s.descricaoTotalSolucao = [separaAtributos objectForKey:@"descricaoTotalSolucao"];
+        s.caminhoLink = [separaAtributos objectForKey:@"caminhoLink"];
         
         
         [listaImplementacoesPorSolucao addObject:s];

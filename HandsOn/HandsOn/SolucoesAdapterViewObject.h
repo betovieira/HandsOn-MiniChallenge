@@ -17,10 +17,17 @@
 @property (nonatomic) NSString *interesse;
 @property (nonatomic) int curtidasSolucao;
 
+@property (nonatomic) NSString *caminhoAnexoSolucao;
+
+@property (nonatomic) NSString *descricaoTotalSolucao;
+@property (nonatomic) NSString *caminhoLink;
+
+
 - (NSMutableArray *) retornaTodosSolucoesAdaptadosAreaUltimos: (NSString *)strArea;
 - (NSMutableArray *) retornaSolucaoAdaptadosTodos;
 - (NSMutableArray *) retornaTodosSolucoesAdaptadosAreaCurtida: (NSString *)strArea;
 - (NSMutableArray *) retornaSolucoesAdaptadosTodosPorCurtida;
+- (NSMutableArray *) retornaTodosSolucoesPorProblema: (int) id_problema;
 
 
 @end

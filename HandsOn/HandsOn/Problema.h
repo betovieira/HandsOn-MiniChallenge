@@ -16,6 +16,8 @@
 @property (nonatomic) int id_usuario;
 @property (nonatomic) int id_area;
 @property (nonatomic) NSString *descricaoProblema;
+@property (nonatomic) NSString *descricaoTotalProblema;
+@property (nonatomic) NSString *caminhoLink;
 @property (nonatomic) int curtidasProblema;
 
 - (NSMutableArray *) retornaProblemasTodos;

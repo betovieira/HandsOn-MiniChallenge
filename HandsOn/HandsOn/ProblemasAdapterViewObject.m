@@ -27,8 +27,10 @@
             ProblemasAdapterViewObject *p = [[ProblemasAdapterViewObject alloc] init];
             p.id_problema = [[separaAtributos objectForKey:@"id_problema"] intValue];
             p.nomeArea = [separaAtributos objectForKey:@"nomeArea"];
-            p.descricaoProblema = [separaAtributos objectForKey:@"descricaoProblema"] ;
+            p.descricaoProblema = [separaAtributos objectForKey:@"descricaoProblema"];
             p.nome_usuario = [separaAtributos objectForKey:@"nome_usuario"];
+            p.descricaoTotalProblema = [separaAtributos objectForKey:@"descricaoTotalProblema"];
+            p.caminhoLink = [separaAtributos objectForKey:@"caminhoLink"];
             p.curtidasProblema = [[separaAtributos objectForKey:@"curtidasProblema"] intValue];
             
             [listaProblemas addObject:p];
@@ -58,8 +60,10 @@
             ProblemasAdapterViewObject *p = [[ProblemasAdapterViewObject alloc] init];
             p.id_problema = [[separaAtributos objectForKey:@"id_problema"] intValue];
             p.nomeArea = [separaAtributos objectForKey:@"nomeArea"];
-            p.descricaoProblema = [separaAtributos objectForKey:@"descricaoProblema"] ;
+            p.descricaoProblema = [separaAtributos objectForKey:@"descricaoProblema"];
             p.nome_usuario = [separaAtributos objectForKey:@"nome_usuario"];
+            p.descricaoTotalProblema = [separaAtributos objectForKey:@"descricaoTotalProblema"];
+            p.caminhoLink = [separaAtributos objectForKey:@"caminhoLink"];
             p.curtidasProblema = [[separaAtributos objectForKey:@"curtidasProblema"] intValue];
             
             [listaProblemas addObject:p];
@@ -91,6 +95,8 @@
             p.nomeArea = [separaAtributos objectForKey:@"nomeArea"];
             p.descricaoProblema = [separaAtributos objectForKey:@"descricaoProblema"] ;
             p.nome_usuario = [separaAtributos objectForKey:@"nome_usuario"];
+            p.descricaoTotalProblema = [separaAtributos objectForKey:@"descricaoTotalProblema"];
+            p.caminhoLink = [separaAtributos objectForKey:@"caminhoLink"];
             p.curtidasProblema = [[separaAtributos objectForKey:@"curtidasProblema"] intValue];
             
             [listaProblemas addObject:p];
@@ -123,6 +129,8 @@
             p.nomeArea = [separaAtributos objectForKey:@"nomeArea"];
             p.descricaoProblema = [separaAtributos objectForKey:@"descricaoProblema"] ;
             p.nome_usuario = [separaAtributos objectForKey:@"nome_usuario"];
+            p.descricaoTotalProblema = [separaAtributos objectForKey:@"descricaoTotalProblema"];
+            p.caminhoLink = [separaAtributos objectForKey:@"caminhoLink"];
             p.curtidasProblema = [[separaAtributos objectForKey:@"curtidasProblema"] intValue];
             
             [listaProblemas addObject:p];

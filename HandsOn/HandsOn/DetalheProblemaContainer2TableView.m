@@ -1,69 +1,38 @@
 //
-//  MenuLateralPrincipalTableViewController.m
+//  DetalheProblemaContainer2TableView.m
 //  HandsOn
 //
-//  Created by Humberto Vieira de Castro on 4/17/15.
+//  Created by Humberto Vieira de Castro on 4/24/15.
 //  Copyright (c) 2015 Humberto Vieira de Castro. All rights reserved.
 //
 
-#import "MenuLateralPrincipalTableViewController.h"
+#import "DetalheProblemaContainer2TableView.h"
+#import "SolucoesAdapterViewObject.h"
+#import "Solucao.h"
 
 
-@interface MenuLateralPrincipalTableViewController ()
-@property (strong, nonatomic) IBOutlet UIImageView *imgViewProblemas;
-- (void) reiniciaMenuLateral;
+@interface DetalheProblemaContainer2TableView ()
+
 @end
 
-@implementation MenuLateralPrincipalTableViewController
-float inicioR;
-float inicioG;
-float inicioB;
+@implementation DetalheProblemaContainer2TableView
 
-float clickR;
-float clickG;
-float clickB;
-
-NSMutableArray *cells;
+NSMutableArray *listaSolucao;
+SolucoesAdapterViewObject *sa;
+Solucao *s;
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    s = [[Solucao alloc]init];
+    sa = [[SolucoesAdapterViewObject alloc] init];
     
-    inicioR = 206.0/255.0f;
-    inicioG = 77.0/255.0f;
-    inicioB = 77.0/255.0f;
+    [((UITableView *)self.view)reloadData];
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
     
-    clickR = 188.0/255.0f;
-    clickG = 59.0/255.0f;
-    clickB = 59.0/255.0f;
-    
-    self.imgViewProblemas.autoresizingMask = UIViewAutoresizingNone;
-    
-    cells = [[NSMutableArray alloc]init];
-    
-    //self.cellProblema.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"img_menuproblemas.png"]];
-
-
-    //self.cellSolucao.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"img_menusolucoes.png"] ];
-    
-    //self.cellPessoal.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"img_menupessoal.png"] ];
-
-    //self.cellConfig.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"img_menuconfig.png"] ];
-    
-    [cells addObject:self.cellProblema];
-    [cells addObject:self.cellSolucao];
-    [cells addObject:self.cellPessoal];
-    [cells addObject:self.cellConfig];
-    
-    self.tableView.backgroundColor = [UIColor colorWithRed:inicioR green:inicioG blue:inicioB alpha:1.0f];
-    
-    self.imgViewProblemas.contentMode = UIViewContentModeScaleAspectFit;
-    
-    
-    self.reiniciaMenuLateral;
-
-
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,42 +40,61 @@ NSMutableArray *cells;
     // Dispose of any resources that can be recreated.
 }
 
-- (void) reiniciaMenuLateral
-{
+- (id)initWithLista:(NSMutableArray *) temp {
+    self = [super init];
     
-    for(int i = 0; i < 4; i++)
-    {
-        UITableViewCell *c = [cells objectAtIndex:i];
-        c.backgroundColor = [UIColor colorWithRed:inicioR green:inicioG blue:inicioB alpha:1.0f];
+    if(self){
+        listaSolucao = temp;
     }
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-   
-    self.reiniciaMenuLateral;
-    [((UITableView *)self.view)reloadData];
     
-    UITableViewCell *c = [cells objectAtIndex:indexPath.row];
-
-    c.backgroundColor = [UIColor colorWithRed:clickR green:clickG blue:clickB alpha:1.0f];
-    
-    
-    NSLog(@"%lu", indexPath.row);
+    return self;
 }
 
 #pragma mark - Table view data source
-/*
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
-}*/
+    return listaSolucao.count;
+}
+
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellSolucao2" forIndexPath:indexPath];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellSolucao2"];
+    }
+    
+    sa = [listaSolucao objectAtIndex:indexPath.row];
+    
+    UILabel *labelArea = (UILabel *)[cell viewWithTag:880];
+    
+    labelArea.text = [NSString stringWithFormat:@"%@", sa.nomeArea];
+    
+    UILabel *labelTitulo = (UILabel *)[cell viewWithTag:881];
+    labelTitulo.text = sa.descricaoSolucao;
+    
+    
+    UILabel *labelImplementacoes = (UILabel *)[cell viewWithTag:882];
+    //labelImplementacoes.text = [NSString stringWithFormat:@"%zd implementações ",
+ //                               [s retornaQuantidadeImplementacoes:(int)sa.id_solucao]];
+    
+    
+    UILabel *labelCurtida = (UILabel *)[cell viewWithTag:883];
+    labelCurtida.text = [NSString stringWithFormat:@"%d", sa.curtidasSolucao];
+    
+    return cell;
+}
+
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

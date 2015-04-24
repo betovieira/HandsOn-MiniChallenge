@@ -21,8 +21,10 @@
 		$id_usuario = $_POST['id_usuario'];
 		$id_area = $_POST['id_area'];
 		$descricaoProblema = $_POST['descricaoProblema'];
+		$descricaoTotalProblema = $_POST['descricaoTotalProblema'];
+		$caminhoLink = $_POST['caminhoLink'];
 
-		$command = "INSERT INTO `problema`(`id_problema`, `id_usuario`, `id_area`, `descricaoProblema`, `curtidasProblema`) VALUES (null,$id_usuario,$id_area,'$descricaoProblema',0)";
+		$command = "INSERT INTO `problema`(`id_problema`, `id_usuario`, `id_area`, `descricaoProblema`, `descricaoTotalProblema`, `caminhoLink`, `curtidasProblema`) VALUES (null,$id_usuario,$id_area,'$descricaoProblema','$descricaoTotalProblema', '$caminhoLink',0)";
 
 		echo insertMySQL($command);
 	}
@@ -43,7 +45,10 @@
 		$interesse = $_POST['interesse'];	
 		$id_area = $_POST['id_area']; 
 
-		$command = "INSERT INTO `solucao`(`id_solucao`, `id_problema`, `descricaoSolucao`, `caminhoAnexoSolucao`, `interesse`, `curtidasSolucao`, `id_area`) VALUES (null,$id_problema,'$descricaoSolucao','$caminhoAnexoSolucao','$interesse',0, $id_area)";
+		$descricaoTotalSolucao = $_POST['descricaoTotalSolucao'];
+		$caminhoLink = $_POST['caminhoLink'];
+
+		$command = "INSERT INTO `solucao`(`id_solucao`, `id_problema`, `descricaoSolucao`, `descricaoTotalSolucao`,`caminhoLink`, `caminhoAnexoSolucao`, `interesse`, `curtidasSolucao`, `id_area`) VALUES (null,$id_problema,'$descricaoSolucao','$descricaoTotalSolucao','$caminhoLink' ,'$caminhoAnexoSolucao','$interesse',0, $id_area)";
 		//echo $command;
 		echo insertMySQL($command);
 	} 

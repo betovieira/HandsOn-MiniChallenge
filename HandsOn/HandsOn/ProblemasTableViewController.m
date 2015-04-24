@@ -10,6 +10,8 @@
 #import "Problema.h"
 #import "ProblemasAdapterViewObject.h"
 #import "MenuLateralPrincipalTableViewController.h"
+#import "DetalheProblemaViewController.h"
+#import "SolucoesAdapterViewObject.h"
 
 
 @interface ProblemasTableViewController () <UIActionSheetDelegate>
@@ -106,12 +108,12 @@ UIButton *imagemCurtir;
     
     //Numero de solucoes
     UILabel *labelSolucoes = (UILabel *)[cell viewWithTag:120];
-    labelSolucoes.text = [NSString stringWithFormat:@"Soluções: %d", [p retornaQuantidadeDeSolucoes:pa.id_problema ] ];
+    labelSolucoes.text = [NSString stringWithFormat:@"%d soluções", [p retornaQuantidadeDeSolucoes:pa.id_problema ] ];
     
     
     imagemCurtir = (UIButton *) [cell viewWithTag:210];
     
-    //[imagemCurtir setImage: [UIImage imageNamed:@"img_curtirInativo.png"] forState:UIControlStateNormal];
+    [imagemCurtir setImage: [UIImage imageNamed:@"img_curtirInativo.png"] forState:UIControlStateNormal];
 
     
     
@@ -123,12 +125,36 @@ UIButton *imagemCurtir;
     
     [imagemCurtir setImage: [UIImage imageNamed:@"img_curtirAtivo.png"] forState:UIControlStateNormal];
     
-    NSLog(@"Sexo");
+    NSLog(@"saa");
 }
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //NSLog(@"%lu", indexPath.row);
+    NSLog(@"INDEX: %lu", indexPath.row);
+    @try{
+    ProblemasAdapterViewObject *p = [listaProblema objectAtIndex:indexPath.row];
+    
+//    UIStoryboard * tela = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    DetalheProblemaViewController *view;
+//    view = [[DetalheProblemaViewController alloc] initWithProblema:p];
+//    
+//    
+//    view = [tela instantiateViewControllerWithIdentifier:@"detalheProblemaPrincipal"];
+//    view.modalTransitionStyle = UIS;
+//    [self presentViewController:view animated:YES completion:nil];
+//    
+//    
+    
+    
+    
+    UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    DetalheProblemaViewController *view = [main instantiateViewControllerWithIdentifier:@"detalheProblemaPrincipal"];
+    view = [[DetalheProblemaViewController alloc]initWithProblema:p];
+    [self performSegueWithIdentifier:@"segueDetalhePrincipal" sender:self];
+    
+    }@catch(NSException *e){
+        NSLog(@"TEste");
+    }
 }
 
 

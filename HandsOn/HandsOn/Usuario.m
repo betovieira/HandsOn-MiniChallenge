@@ -21,7 +21,10 @@
         NSDictionary *separaAtributos = [separaObjetos objectAtIndex:0];
 
         int retorno = [[separaAtributos objectForKey:@"id_usuario"] intValue];
-    
+        
+        [[NSUserDefaults standardUserDefaults] setInteger:retorno forKey:@"id_usuario"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
         if(retorno < 0)
             return false;
         

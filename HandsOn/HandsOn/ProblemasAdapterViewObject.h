@@ -14,6 +14,8 @@
 @property (nonatomic) NSString *nomeArea;
 @property (nonatomic) NSString *descricaoProblema;
 @property (nonatomic) NSString *nome_usuario;
+@property (nonatomic) NSString *descricaoTotalProblema;
+@property (nonatomic) NSString *caminhoLink;
 @property (nonatomic) int curtidasProblema;
 
 - (NSMutableArray *) retornaTodosProblemasAdaptadosAreaUltimos: (NSString *)strArea;

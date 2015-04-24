@@ -103,19 +103,19 @@ NSMutableArray *listaSolucao;
     
     UILabel *labelArea = (UILabel *)[cell viewWithTag:201];
     
-    labelArea.text = [NSString stringWithFormat:@"Area: %@", sa.nomeArea];
+    labelArea.text = [NSString stringWithFormat:@"%@", sa.nomeArea];
     
     UILabel *labelTitulo = (UILabel *)[cell viewWithTag:202];
     labelTitulo.text = sa.descricaoSolucao;
     
     
     UILabel *labelImplementacoes = (UILabel *)[cell viewWithTag:203];
-    labelImplementacoes.text = [NSString stringWithFormat:@"Implementações: %zd",
+    labelImplementacoes.text = [NSString stringWithFormat:@"%zd implementações ",
                                 [s retornaQuantidadeImplementacoes:sa.id_solucao]];
     
     
     UILabel *labelCurtida = (UILabel *)[cell viewWithTag:204];
-    labelCurtida.text = [NSString stringWithFormat:@"Curtidas: %d", sa.curtidasSolucao];
+    labelCurtida.text = [NSString stringWithFormat:@"%d", sa.curtidasSolucao];
     
     return cell;
 }

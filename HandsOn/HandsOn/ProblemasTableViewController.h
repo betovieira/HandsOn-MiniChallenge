@@ -11,6 +11,7 @@
 @interface ProblemasTableViewController : UITableViewController
 
 - (id)initWithListaNova:(NSMutableArray *)listaNova;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 //@property (strong, nonatomic) IBOutlet UIToolbar *btnOrdenarPor;
 //- (IBAction)showOrdenarActionSheet:(id)sender;
 //@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnFiltrarArea;

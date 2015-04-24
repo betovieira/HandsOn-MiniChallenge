@@ -12,9 +12,11 @@
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *btnArea;
 
+@property (strong, nonatomic) IBOutlet UITextField *txtTitulo;
 @property (weak, nonatomic) IBOutlet UITextView *descricaoTxt;
+@property (strong, nonatomic) IBOutlet UITextField *txtCaminhoLink;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollViewNovoProblema;
 
 - (IBAction)showActionArea:(id)sender;
-
+- (IBAction)txtEditBegin:(id)sender;
 @end
