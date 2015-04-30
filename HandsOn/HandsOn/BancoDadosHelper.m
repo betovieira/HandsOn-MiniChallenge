@@ -13,7 +13,6 @@
 
 + (NSArray *) retornaDados:(NSString *)url
 {
-    
     NSString *string = url;
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:string]];

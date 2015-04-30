@@ -11,7 +11,7 @@
 #import "ProblemasTableViewController.h"
 #import "ProblemasAdapterViewObject.h"
 
-@interface BaseProblemasViewController ()<UIActionSheetDelegate>
+@interface BaseProblemasViewController () <UIActionSheetDelegate>
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *lblOrdenar;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *lblFiltrar;
 
@@ -36,7 +36,17 @@ UIButton *imagemCurtir;
     
     ProblemasTableViewController *problemaView;
     
+    
+    NSLog(@"%@", listaProblema);
+    
     listaProblema = [pa retornaProblemasAdaptadosTodos];
+    
+    for (ProblemasAdapterViewObject *a in listaProblema) {
+        NSLog(@"%@ ", a.descricaoProblema);
+    }
+    
+    
+    
     problemaView = [[ProblemasTableViewController alloc] initWithListaNova:listaProblema];
     
     problemaView = [self.storyboard instantiateViewControllerWithIdentifier:@"viewProblemas"];

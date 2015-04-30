@@ -47,7 +47,7 @@
 - (NSMutableArray *) retornaProblemasAdaptadosTodos
 {
     NSMutableArray *listaProblemas = [[NSMutableArray alloc] init];
-    @try {
+    
         NSString *string = [NSString stringWithFormat:@"http://betovieira.com.br/handson/retornadados.php?tipo_operacao=20"];
         
         NSArray *separaObjetos = [BancoDadosHelper retornaDados:string];
@@ -70,10 +70,7 @@
         }
         
         return listaProblemas;
-    }@catch (NSException *e){
-        NSLog(@"%@", e);
-        return nil;
-    }
+
 }
 
 - (NSMutableArray *) retornaTodosProblemasAdaptadosAreaCurtida: (NSString *)strArea
