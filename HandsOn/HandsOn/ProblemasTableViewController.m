@@ -32,6 +32,7 @@ NSMutableArray *listaProblema;
 NSString *paramOrdenar;
 NSString *paramFiltrar;
 UIButton *imagemCurtir;
+NSURL *url;
 
 
 
@@ -39,17 +40,39 @@ UIButton *imagemCurtir;
     [super viewDidLoad];
     
     
+
     paramOrdenar = @"Ultimos Inseridos";
     paramFiltrar = @"Todos";
     
     p = [[Problema alloc]init];
-   
+    //[self makeRestAPICall:@"http://betovieira.com.br/handson/retornadados.php?tipo_operacao=20"];
+    
     
     pa = [[ProblemasAdapterViewObject alloc] init];
     
     //listaProblema = [pa retornaProblemasAdaptadosTodos];
 
 }
+
+/*-(NSString*) makeRestAPICall : (NSString*) reqURLStr
+{
+    
+    url = [NSURL URLWithString:reqURLStr];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url
+                                                                cachePolicy: NSURLRequestReloadIgnoringLocalAndRemoteCacheData
+                                                            timeoutInterval: 60];
+    
+    [NSURLConnection connectionWithRequest:request delegate:self];
+   
+    NSURLResponse *resp = nil;
+    NSError *error = nil;
+    NSData *response = [NSURLConnection sendSynchronousRequest: request returningResponse: &resp error: &error];
+    NSMutableString *responseString = [[NSMutableString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+    NSLog(@"%@",responseString);
+    
+    return responseString;
+}*/
+
 
 - (id)initWithListaNova:(NSMutableArray *)listaNova {
     self = [super init];
@@ -108,7 +131,8 @@ UIButton *imagemCurtir;
     
     //Numero de solucoes
     UILabel *labelSolucoes = (UILabel *)[cell viewWithTag:120];
-    labelSolucoes.text = [NSString stringWithFormat:@"%d soluções", [p retornaQuantidadeDeSolucoes:pa.id_problema ] ];
+    
+    labelSolucoes.text = [NSString stringWithFormat:@"%d soluções", pa.quantidadeSolucoes ];
     
     
     imagemCurtir = (UIButton *) [cell viewWithTag:210];
@@ -123,9 +147,9 @@ UIButton *imagemCurtir;
 
 - (IBAction)eventClickCurtidas:(id)sender {
     
-    [imagemCurtir setImage: [UIImage imageNamed:@"img_curtirAtivo.png"] forState:UIControlStateNormal];
+    //[imagemCurtir setImage: [UIImage imageNamed:@"img_curtirAtivo.png"] forState:UIControlStateNormal];
     
-    NSLog(@"saa");
+    //NSLog(@"saa");
 }
 
 

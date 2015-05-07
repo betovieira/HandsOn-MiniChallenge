@@ -76,7 +76,7 @@
 
 - (int) retornaQuantidadeDeSolucoes: (int) id_problema
 {
-    NSMutableArray *listaQuantidadeCurtidas = [[NSMutableArray alloc] init];
+    //NSMutableArray *listaQuantidadeCurtidas = [[NSMutableArray alloc] init];
     
     NSString *string = [NSString stringWithFormat:@"http://betovieira.com.br/handson/retornadados.php?tipo_operacao=8&id_problema=%d", id_problema];
     

@@ -29,7 +29,7 @@
 -(NSMutableArray *) retornaSolucoesPorID: (Solucao *)s;
 -(NSMutableArray *) retornaSolucoesPorArea: (Area *)a;
 -(NSMutableArray *) retornaSolucoesCurtidas;
-- (NSInteger*) retornaQuantidadeImplementacoes:(NSInteger *) id_sol;
+- (NSInteger) retornaQuantidadeImplementacoes:(NSInteger)id_sol;
 -(NSMutableArray *) retornaImplementacoesPorSolucao: (Solucao *)s;
 
 @end

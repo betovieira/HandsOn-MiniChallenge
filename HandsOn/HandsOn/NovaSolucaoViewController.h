@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *txtAnexo;
 @property (strong, nonatomic) IBOutlet UITextField *txtHabilidades;
 @property (weak, nonatomic) IBOutlet UITextView *txtDescricao;
+@property (strong, nonatomic) IBOutlet UILabel *txtStatusCadastro;
 
 //- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 - (IBAction)eventCadastrar:(id)sender;

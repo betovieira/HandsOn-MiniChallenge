@@ -61,9 +61,6 @@ CGPoint pontoScroll;
     
 }
 
-
-
-
 - (IBAction)eventEntrar:(id)sender {
     Usuario *u = [[Usuario alloc] init];
     u.email = self.txtEmail.text;
@@ -83,7 +80,6 @@ CGPoint pontoScroll;
 }
 
 - (IBAction)eventClick_NaoTenhoCadastro:(id)sender {
-    NSLog(@"fuck");
     UIStoryboard * tela = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     LoginViewController * view = [tela instantiateViewControllerWithIdentifier:@"idNavCadastroViewController"];
     view.modalTransitionStyle = UIModalTransitionStyleCoverVertical;

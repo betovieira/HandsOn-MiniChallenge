@@ -55,6 +55,9 @@ UIButton *imagemCurtir;
     self.lblOrdenar.title = paramOrdenar;
     self.lblFiltrar.title = paramFiltrar;
     
+    [self.lblOrdenar setTintColor:[UIColor clearColor]];
+    [self.lblFiltrar setTintColor:[UIColor clearColor]];
+    
     a = [[Area alloc] init];
     listaAreas = [a retornaAreasTodas];
     
@@ -131,6 +134,7 @@ UIButton *imagemCurtir;
 {
     NSString *param;
     
+    
     @try {
         param = [actionSheet buttonTitleAtIndex:buttonIndex];
         if(actionSheet == ordenarActionSheet)
@@ -172,12 +176,12 @@ UIButton *imagemCurtir;
                     listaSolucoes = [sa retornaSolucaoAdaptadosTodos];
                     [self mudaContainerView:listaSolucoes];
                     paramFiltrar = param;
-                    NSLog(@"fuck3");
+                    //NSLog(@"fuck3");
                 }else if([[paramOrdenar lowercaseString] isEqualToString:@"mais curtidas"]){
                     listaSolucoes = [sa retornaSolucoesAdaptadosTodosPorCurtida];
                     [self mudaContainerView:listaSolucoes];
                     paramFiltrar = param;
-                    NSLog(@"fuck2");
+                    //NSLog(@"fuck2");
                 }
                 
             }else{
@@ -185,7 +189,7 @@ UIButton *imagemCurtir;
                     listaSolucoes = [sa retornaTodosSolucoesAdaptadosAreaUltimos:paramFiltrar];
                     [self mudaContainerView:listaSolucoes];
                     paramFiltrar = param;
-                    NSLog(@"fuck1");
+                    //NSLog(@"fuck1");
                     
                 }else if([[paramOrdenar lowercaseString]isEqualToString:@"mais curtidas"]){
                     listaSolucoes = [sa retornaTodosSolucoesAdaptadosAreaCurtida:paramFiltrar];

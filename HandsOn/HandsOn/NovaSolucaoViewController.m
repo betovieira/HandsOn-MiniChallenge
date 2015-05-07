@@ -2,12 +2,13 @@
 //  NovaSolucaoViewController.m
 //  HandsOn
 //
-//  Created by Pedro Lopes on 4/23/15.
+//  Created by Humberto Vieira de Castro on 4/23/15.
 //  Copyright (c) 2015 Humberto Vieira de Castro. All rights reserved.
 //
 
 #import "NovaSolucaoViewController.h"
 #import "Solucao.h"
+#import "Singleton.h"
 
 
 @interface NovaSolucaoViewController ()
@@ -52,8 +53,12 @@ CGPoint pontoScroll;
 
 - (IBAction)eventCadastrar:(id)sender {
     Solucao *s = [[Solucao alloc]init];
-    s.id_problema = 12; // User Default
-    s.id_area = 1; // User Default
+    Singleton *sing = [Singleton sharedManager];
+    NSLog(@"%d", [sing.id_area intValue]);
+    NSLog(@"%d", [sing.id_problema intValue]);
+    
+    s.id_problema = [sing.id_problema intValue] ; // User Default
+    s.id_area = [sing.id_area intValue]; // User Default
     s.descricaoSolucao = self.txtTitulo.text;
     s.caminhoAnexoSolucao = self.txtAnexo.text;
     s.descricaoTotalSolucao = self.txtDescricao.text;
@@ -62,9 +67,10 @@ CGPoint pontoScroll;
     s.curtidasSolucao = 0;
     
     if ([s cadastroSolucao:s]) {
+        self.txtStatusCadastro.text = @"Cadastrado com sucesso!";
         NSLog(@"Foi carai");
     }else {
-        NSLog(@"Nao foi");
+        self.txtStatusCadastro.text = @"Insira todos os dados!";
     }
 }
 @end

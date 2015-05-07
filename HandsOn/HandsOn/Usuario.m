@@ -48,7 +48,8 @@
 
         [urlRequest setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
 
-        NSURLConnection *c = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
+        [NSURLConnection connectionWithRequest:urlRequest delegate:self];
+        
         NSData *response = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:nil];
         NSArray *separaObjetos = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
         NSDictionary *separaAtributos = [separaObjetos objectAtIndex:0];

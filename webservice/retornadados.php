@@ -171,7 +171,7 @@ http://betovieira.com.br/handson/retornadados.php?tipo_operacao=18
 		if($area == NULL)
 			$area = '';
 
-		$query = "SELECT P.id_problema, A.nomeArea, P.descricaoProblema, P.descricaoTotalProblema,  P.caminhoLink, U.nome_usuario, P.curtidasProblema
+		$query = "SELECT P.id_problema,A.id_area,  A.nomeArea, P.descricaoProblema, P.descricaoTotalProblema,  P.caminhoLink, U.nome_usuario, P.curtidasProblema, (SELECT COUNT(*) AS retorno FROM `solucao` WHERE id_problema = P.id_problema) as quantidadeSolucoes
       				FROM `problema` AS P 
 			  INNER JOIN `area` AS A
         					ON P.id_area = A.id_area
@@ -187,7 +187,7 @@ http://betovieira.com.br/handson/retornadados.php?tipo_operacao=18
 		http://betovieira.com.br/handson/retornadados.php?tipo_operacao=19
 	*/
 	else if($tipo_operacao == 20) {
-		$query = "SELECT P.id_problema, A.nomeArea, P.descricaoProblema, P.descricaoTotalProblema, P.caminhoLink, U.nome_usuario, P.curtidasProblema
+		$query = "SELECT P.id_problema,A.id_area,  A.nomeArea, P.descricaoProblema, P.descricaoTotalProblema, P.caminhoLink, U.nome_usuario, P.curtidasProblema, (SELECT COUNT(*) AS retorno FROM `solucao` WHERE id_problema = P.id_problema) as quantidadeSolucoes
       				FROM `problema` AS P 
 			  INNER JOIN `area` AS A
         					ON P.id_area = A.id_area
@@ -204,7 +204,7 @@ http://betovieira.com.br/handson/retornadados.php?tipo_operacao=18
 	else if($tipo_operacao == 21) {
 		$area = $_GET['area'];
 
-		$query = "SELECT P.id_problema, A.nomeArea, P.descricaoProblema, P.descricaoTotalProblema, P.caminhoLink, U.nome_usuario, P.curtidasProblema
+		$query = "SELECT P.id_problema,A.id_area,  A.nomeArea, P.descricaoProblema, P.descricaoTotalProblema, P.caminhoLink, U.nome_usuario, P.curtidasProblema, (SELECT COUNT(*) AS retorno FROM `solucao` WHERE id_problema = P.id_problema) as quantidadeSolucoes
       				FROM `problema` AS P 
 			  INNER JOIN `area` AS A
         					ON P.id_area = A.id_area
@@ -222,7 +222,7 @@ http://betovieira.com.br/handson/retornadados.php?tipo_operacao=18
 	else if($tipo_operacao == 22) {
 		$area = $_GET['area'];
 
-		$query = "SELECT P.id_problema, A.nomeArea, P.descricaoProblema, P.descricaoTotalProblema,  P.caminhoLink, U.nome_usuario, P.curtidasProblema
+		$query = "SELECT P.id_problema, A.id_area, A.nomeArea, P.descricaoProblema, P.descricaoTotalProblema,  P.caminhoLink, U.nome_usuario, P.curtidasProblema, (SELECT COUNT(*) AS retorno FROM `solucao` WHERE id_problema = P.id_problema) as quantidadeSolucoes
       				FROM `problema` AS P 
 			  INNER JOIN `area` AS A
         					ON P.id_area = A.id_area
@@ -241,7 +241,7 @@ http://betovieira.com.br/handson/retornadados.php?tipo_operacao=18
 		if($area == NULL)
 			$area = '';
 
-		$query = "SELECT S.id_solucao, S.id_usuario, S.curtidasSolucao, S.descricaoTotalSolucao,  S.caminhoLink, A.nomeArea, S.descricaoSolucao, S.interesse
+		$query = "SELECT S.id_solucao, S.id_usuario, S.curtidasSolucao, S.descricaoTotalSolucao,  S.caminhoLink, A.nomeArea, S.descricaoSolucao, S.interesse, (SELECT COUNT(*) AS retorno FROM `implementacao` WHERE id_solucao = S.id_solucao) as quantidadeImplementacoes
       				FROM `solucao` AS S 
 			  INNER JOIN `area` AS A
         					ON S.id_area = A.id_area
@@ -259,7 +259,7 @@ http://betovieira.com.br/handson/retornadados.php?tipo_operacao=18
 	*/
 	else if($tipo_operacao == 24) {
 
-  		$query = "SELECT S.id_solucao, S.id_usuario, S.curtidasSolucao, S.descricaoTotalSolucao,  S.caminhoLink, A.nomeArea, S.descricaoSolucao, S.interesse
+  		$query = "SELECT S.id_solucao, S.id_usuario, S.curtidasSolucao, S.descricaoTotalSolucao,  S.caminhoLink, A.nomeArea, S.descricaoSolucao, S.interesse,  (SELECT COUNT(*) AS retorno FROM `implementacao` WHERE id_solucao = S.id_solucao) as quantidadeImplementacoes
       				FROM `solucao` AS S 
 			  INNER JOIN `area` AS A
         					ON S.id_area = A.id_area
@@ -276,7 +276,7 @@ http://betovieira.com.br/handson/retornadados.php?tipo_operacao=18
 	else if($tipo_operacao == 25) {
 		$area = $_GET['area'];
 	
-		$query = "SELECT S.id_solucao, S.id_usuario, S.curtidasSolucao, S.descricaoTotalSolucao,  S.caminhoLink, A.nomeArea, S.descricaoSolucao, S.interesse
+		$query = "SELECT S.id_solucao, S.id_usuario, S.curtidasSolucao, S.descricaoTotalSolucao,  S.caminhoLink, A.nomeArea, S.descricaoSolucao, S.interesse,  (SELECT COUNT(*) AS retorno FROM `implementacao` WHERE id_solucao = S.id_solucao) as quantidadeImplementacoes
       				FROM `solucao` AS S 
 			  INNER JOIN `area` AS A
         					ON S.id_area = A.id_area
@@ -294,7 +294,7 @@ http://betovieira.com.br/handson/retornadados.php?tipo_operacao=18
 	*/
 	else if($tipo_operacao == 26) {
 
-  		$query = "SELECT S.id_solucao, S.id_usuario, S.curtidasSolucao, S.descricaoTotalSolucao,  S.caminhoLink, A.nomeArea, S.descricaoSolucao, S.interesse
+  		$query = "SELECT S.id_solucao, S.id_usuario, S.curtidasSolucao, S.descricaoTotalSolucao,  S.caminhoLink, A.nomeArea, S.descricaoSolucao, S.interesse,  (SELECT COUNT(*) AS retorno FROM `implementacao` WHERE id_solucao = S.id_solucao) as quantidadeImplementacoes
       				FROM `solucao` AS S 
 			  INNER JOIN `area` AS A
         					ON S.id_area = A.id_area

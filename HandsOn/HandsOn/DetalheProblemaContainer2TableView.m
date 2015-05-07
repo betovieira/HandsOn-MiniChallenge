@@ -53,13 +53,13 @@ Solucao *s;
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
     return listaSolucao.count;
 }
@@ -85,7 +85,7 @@ Solucao *s;
     
     
     UILabel *labelImplementacoes = (UILabel *)[cell viewWithTag:882];
-    //labelImplementacoes.text = [NSString stringWithFormat:@"%zd implementações ",
+    labelImplementacoes.text = [NSString stringWithFormat:@"%zd implementações ", sa.quantidadeImplementacoes];
  //                               [s retornaQuantidadeImplementacoes:(int)sa.id_solucao]];
     
     

@@ -11,7 +11,7 @@
 
 @interface MenuLateralPrincipalTableViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *imgViewProblemas;
-- (void) reiniciaMenuLateral;
+
 @end
 
 @implementation MenuLateralPrincipalTableViewController
@@ -22,6 +22,10 @@ float inicioB;
 float clickR;
 float clickG;
 float clickB;
+
+float inativeR;
+float inativeG;
+float inativeB;
 
 NSMutableArray *cells;
 
@@ -37,6 +41,11 @@ NSMutableArray *cells;
     clickR = 188.0/255.0f;
     clickG = 59.0/255.0f;
     clickB = 59.0/255.0f;
+    
+    inativeR = 191.0/255.0f;
+    inativeG = 191.0/255.0f;
+    inativeB = 191.0/255.0f;
+    
     
     self.imgViewProblemas.autoresizingMask = UIViewAutoresizingNone;
     
@@ -56,12 +65,12 @@ NSMutableArray *cells;
     [cells addObject:self.cellPessoal];
     [cells addObject:self.cellConfig];
     
-    self.tableView.backgroundColor = [UIColor colorWithRed:inicioR green:inicioG blue:inicioB alpha:1.0f];
+    self.tableView.backgroundColor = [UIColor colorWithRed:inativeR green:inativeG blue:inativeB alpha:1.0f];
     
     self.imgViewProblemas.contentMode = UIViewContentModeScaleAspectFit;
     
     
-    self.reiniciaMenuLateral;
+    [self reiniciaMenuLateral];
 
 
 }
@@ -76,19 +85,30 @@ NSMutableArray *cells;
     
     for(int i = 0; i < 4; i++)
     {
-        UITableViewCell *c = [cells objectAtIndex:i];
-        c.backgroundColor = [UIColor colorWithRed:inicioR green:inicioG blue:inicioB alpha:1.0f];
+        if(i < 2){
+            UITableViewCell *c = [cells objectAtIndex:i];
+            c.backgroundColor = [UIColor colorWithRed:inicioR green:inicioG blue:inicioB alpha:1.0f];
+            
+        }else{
+            UITableViewCell *c = [cells objectAtIndex:i];
+            c.backgroundColor = [UIColor colorWithRed:inativeR green:inativeB blue:inativeB alpha:1.0f];
+        }
     }
+    return;
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
    
-    self.reiniciaMenuLateral;
+    [self reiniciaMenuLateral];
     [((UITableView *)self.view)reloadData];
+    UITableViewCell *c;
     
-    UITableViewCell *c = [cells objectAtIndex:indexPath.row];
-
-    c.backgroundColor = [UIColor colorWithRed:clickR green:clickG blue:clickB alpha:1.0f];
+    if(indexPath.row < 2){
+        c = [cells objectAtIndex:indexPath.row];
+        c.backgroundColor = [UIColor colorWithRed:clickR green:clickG blue:clickB alpha:1.0f];
+    }
+    
     
     
     NSLog(@"%lu", indexPath.row);

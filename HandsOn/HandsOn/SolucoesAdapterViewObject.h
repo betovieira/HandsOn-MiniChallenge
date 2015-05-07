@@ -16,6 +16,7 @@
 @property (nonatomic) NSString *descricaoSolucao;
 @property (nonatomic) NSString *interesse;
 @property (nonatomic) int curtidasSolucao;
+@property (nonatomic) int quantidadeImplementacoes;
 
 @property (nonatomic) NSString *caminhoAnexoSolucao;
 

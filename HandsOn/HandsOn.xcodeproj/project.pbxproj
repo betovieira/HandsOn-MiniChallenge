@@ -46,6 +46,7 @@
 		DBB359081AE20BDB00F02225 /* img_menusolucoes.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB359041AE20BDB00F02225 /* img_menusolucoes.png */; };
 		DBB3590B1AE2139D00F02225 /* img_curtirAtivo.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB359091AE2139D00F02225 /* img_curtirAtivo.png */; };
 		DBB3590C1AE2139D00F02225 /* img_curtirInativo.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB3590A1AE2139D00F02225 /* img_curtirInativo.png */; };
+		DBB60A101AFB865000921E35 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB60A0F1AFB865000921E35 /* Singleton.m */; };
 		DBE824601AD59C7C006065D4 /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE8245F1AD59C7C006065D4 /* Usuario.m */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,8 @@
 		DBB359041AE20BDB00F02225 /* img_menusolucoes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_menusolucoes.png; sourceTree = "<group>"; };
 		DBB359091AE2139D00F02225 /* img_curtirAtivo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_curtirAtivo.png; sourceTree = "<group>"; };
 		DBB3590A1AE2139D00F02225 /* img_curtirInativo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_curtirInativo.png; sourceTree = "<group>"; };
+		DBB60A0E1AFB865000921E35 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		DBB60A0F1AFB865000921E35 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 		DBE8245E1AD59C7C006065D4 /* Usuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Usuario.h; sourceTree = "<group>"; };
 		DBE8245F1AD59C7C006065D4 /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Usuario.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -245,6 +248,8 @@
 				DB0924521AE0500F003EDCC3 /* ProblemasAdapterViewObject.m */,
 				DBB358F01AE1788C00F02225 /* SolucoesAdapterViewObject.h */,
 				DBB358F11AE1788C00F02225 /* SolucoesAdapterViewObject.m */,
+				DBB60A0E1AFB865000921E35 /* Singleton.h */,
+				DBB60A0F1AFB865000921E35 /* Singleton.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -418,6 +423,7 @@
 				A05F43611AD5A88B00903CD0 /* LoginViewController.m in Sources */,
 				A0B8D4E41AD5A08000E0A8D7 /* Solucao.m in Sources */,
 				DB1AF14E1AD46C04003F0283 /* AppDelegate.m in Sources */,
+				DBB60A101AFB865000921E35 /* Singleton.m in Sources */,
 				DB38A4B31AE46485007F15C2 /* BaseProblemasViewController.m in Sources */,
 				DB48A3A61AEA2DCB0095294B /* DetalheProblemaContainer2TableView.m in Sources */,
 				DB09244A1ADD5A66003EDCC3 /* BancoDadosHelper.m in Sources */,

@@ -11,13 +11,17 @@
 @interface ProblemasAdapterViewObject : NSObject
 
 @property (nonatomic) int id_problema;
+@property (nonatomic) int id_area;
 @property (nonatomic) NSString *nomeArea;
 @property (nonatomic) NSString *descricaoProblema;
 @property (nonatomic) NSString *nome_usuario;
 @property (nonatomic) NSString *descricaoTotalProblema;
 @property (nonatomic) NSString *caminhoLink;
 @property (nonatomic) int curtidasProblema;
+@property (nonatomic) int quantidadeSolucoes;
 
+
+//-(NSString*) makeRestAPICall : (NSString*) reqURLStr;
 - (NSMutableArray *) retornaTodosProblemasAdaptadosAreaUltimos: (NSString *)strArea;
 - (NSMutableArray *) retornaProblemasAdaptadosTodos;
 - (NSMutableArray *) retornaTodosProblemasAdaptadosAreaCurtida: (NSString *)strArea;

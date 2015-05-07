@@ -32,6 +32,7 @@
             s.nomeArea = [separaAtributos objectForKey:@"nomeArea"];
             s.descricaoSolucao = [separaAtributos objectForKey:@"descricaoSolucao"];
             s.interesse = [separaAtributos objectForKey:@"interesse"] ;
+            s.quantidadeImplementacoes = [[separaAtributos objectForKey:@"quantidadeImplementacoes"] intValue];
             
             [listaSolucao addObject:s];
         }
@@ -47,7 +48,7 @@
 - (NSMutableArray *) retornaSolucaoAdaptadosTodos
 {
     NSMutableArray *listaSolucao = [[NSMutableArray alloc] init];
-    @try {
+    
         NSString *string = [NSString stringWithFormat:@"http://betovieira.com.br/handson/retornadados.php?tipo_operacao=24"];
         
         NSArray *separaObjetos = [BancoDadosHelper retornaDados:string];
@@ -64,15 +65,16 @@
             s.nomeArea = [separaAtributos objectForKey:@"nomeArea"];
             s.descricaoSolucao = [separaAtributos objectForKey:@"descricaoSolucao"];
             s.interesse = [separaAtributos objectForKey:@"interesse"] ;
+            s.quantidadeImplementacoes = [[separaAtributos objectForKey:@"quantidadeImplementacoes"] intValue];
             
             [listaSolucao addObject:s];
         }
         
         return listaSolucao;
-    }@catch (NSException *e){
-        NSLog(@"%@", e);
-        return nil;
-    }
+    
+    
+    
+    
 }
 
 - (NSMutableArray *) retornaTodosSolucoesAdaptadosAreaCurtida: (NSString *)strArea
@@ -96,6 +98,7 @@
             s.nomeArea = [separaAtributos objectForKey:@"nomeArea"];
             s.descricaoSolucao = [separaAtributos objectForKey:@"descricaoSolucao"];
             s.interesse = [separaAtributos objectForKey:@"interesse"] ;
+            s.quantidadeImplementacoes = [[separaAtributos objectForKey:@"quantidadeImplementacoes"] intValue];
             
             [listaSolucao addObject:s];
         }
@@ -129,6 +132,7 @@
             s.nomeArea = [separaAtributos objectForKey:@"nomeArea"];
             s.descricaoSolucao = [separaAtributos objectForKey:@"descricaoSolucao"];
             s.interesse = [separaAtributos objectForKey:@"interesse"] ;
+            s.quantidadeImplementacoes = [[separaAtributos objectForKey:@"quantidadeImplementacoes"] intValue];
             
             [listaSolucao addObject:s];
         }
@@ -165,7 +169,7 @@
             
             s.nomeArea = [separaAtributos objectForKey:@"nomeArea"];
             s.nomeArea = [separaAtributos objectForKey:@"id_area"];
-
+            
             
             s.descricaoSolucao = [separaAtributos objectForKey:@"descricaoSolucao"];
             s.interesse = [separaAtributos objectForKey:@"interesse"] ;

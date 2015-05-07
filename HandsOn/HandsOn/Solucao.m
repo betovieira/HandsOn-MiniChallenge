@@ -2,7 +2,7 @@
 //  Solucao.m
 //  HandsOn
 //
-//  Created by Pedro Lopes on 4/8/15.
+//  Created by Humberto Vieira de Castro on 4/8/15.
 //  Copyright (c) 2015 Humberto Vieira de Castro. All rights reserved.
 //
 
@@ -43,6 +43,7 @@
 }
 
 
+
 -(bool) cadastroSolucao :(Solucao *)s
 {
     
@@ -51,7 +52,9 @@
         
         [urlRequest setHTTPMethod:@"POST"];
         
-        NSString *postString = [NSString stringWithFormat:@"tipo_operacao=4&id_problema=%d&descricaoSolucao=%@&caminhoAnexoSolucao=%@&interesse=%@&id_area=%d&descricaoTotalSolucao=%@&caminhoLink=%@",s.id_problema, s.descricaoSolucao, s.caminhoAnexoSolucao, s.interesses, s.id_area, s.descricaoTotalSolucao, s.caminhoLink];
+        NSLog(@"-------%@--------", [[NSUserDefaults standardUserDefaults] stringForKey:@"id_usuario"]);
+        
+        NSString *postString = [NSString stringWithFormat:@"tipo_operacao=4&id_problema=%d&descricaoSolucao=%@&caminhoAnexoSolucao=%@&interesse=%@&id_area=%d&descricaoTotalSolucao=%@&caminhoLink=%@&id_usuario=%@",s.id_problema, s.descricaoSolucao, s.caminhoAnexoSolucao, s.interesses, s.id_area, s.descricaoTotalSolucao, s.caminhoLink, [[NSUserDefaults standardUserDefaults] stringForKey:@"id_usuario"]];
         
         [urlRequest setValue:[NSString stringWithFormat:@"%lu", (unsigned long) [postString length]] forHTTPHeaderField:@"Content-length"];
         

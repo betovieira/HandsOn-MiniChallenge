@@ -8,7 +8,7 @@
 
 #import "ConfigViewController.h"
 
-@interface ConfigViewController ()
+@interface ConfigViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollViewConfig;
 
 @end

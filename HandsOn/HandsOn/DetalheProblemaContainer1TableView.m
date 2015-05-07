@@ -47,7 +47,7 @@ ProblemasAdapterViewObject *p;
     if(self){
         p = temp;
     }
-    NSLog(@"4");
+    //NSLog(@"4");
     return self;
 }
 

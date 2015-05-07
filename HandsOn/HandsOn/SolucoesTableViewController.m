@@ -11,7 +11,7 @@
 #import "Area.h"
 #import "SolucoesAdapterViewObject.h"
 
-@interface SolucoesTableViewController ()
+@interface SolucoesTableViewController ()  <UIActionSheetDelegate>
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *lblOrdResp;
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *lblFilResp;
@@ -110,8 +110,8 @@ NSMutableArray *listaSolucao;
     
     
     UILabel *labelImplementacoes = (UILabel *)[cell viewWithTag:203];
-    labelImplementacoes.text = [NSString stringWithFormat:@"%zd implementações ",
-                                [s retornaQuantidadeImplementacoes:sa.id_solucao]];
+    labelImplementacoes.text = [NSString stringWithFormat:@"%zd implementações ", sa.quantidadeImplementacoes];
+     //                           [s retornaQuantidadeImplementacoes:sa.id_solucao]];
     
     
     UILabel *labelCurtida = (UILabel *)[cell viewWithTag:204];
@@ -166,7 +166,7 @@ NSMutableArray *listaSolucao;
             
             if([paramOrdenar isEqualToString:@"Ultimos inseridos"])
             {
-                NSLog(@"%@", paramFiltrar);
+                //NSLog(@"%@", paramFiltrar);
                 if([paramFiltrar isEqualToString:@"Todos"]){
                     listaSolucao = [sa retornaSolucaoAdaptadosTodos];
                 }else{

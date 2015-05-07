@@ -10,20 +10,33 @@
 
 @implementation BancoDadosHelper
 
+NSURL *url;
+NSMutableURLRequest *request;
 
-+ (NSArray *) retornaDados:(NSString *)url
++ (NSArray *) retornaDados:(NSString *)url_str
 {
-    NSString *string = url;
+    url = [[NSURL alloc] init];
+    url = [NSURL URLWithString:url_str];
+    request = [[NSMutableURLRequest alloc] initWithURL:url
+                                                                cachePolicy: NSURLRequestReloadIgnoringLocalAndRemoteCacheData
+                                                            timeoutInterval: 5];
+    [request setHTTPShouldHandleCookies:NO];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:string]];
+    [NSURLConnection connectionWithRequest:request delegate:self];
     
-    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSURLResponse *resp = nil;
+    NSError *error = nil;
+    
+    NSData *response = [NSURLConnection sendSynchronousRequest: request returningResponse: &resp error: &error]
+    ;
+    //NSMutableString *responseString = [[NSMutableString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+    //NSLog(@"%@",responseString);
+    
     NSArray *separaObjetos = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
     
     return separaObjetos;
+    
 }
-
-
 
 
 @end

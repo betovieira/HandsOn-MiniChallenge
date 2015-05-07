@@ -37,15 +37,7 @@ UIButton *imagemCurtir;
     ProblemasTableViewController *problemaView;
     
     
-    NSLog(@"%@", listaProblema);
-    
     listaProblema = [pa retornaProblemasAdaptadosTodos];
-    
-    for (ProblemasAdapterViewObject *a in listaProblema) {
-        NSLog(@"%@ ", a.descricaoProblema);
-    }
-    
-    
     
     problemaView = [[ProblemasTableViewController alloc] initWithListaNova:listaProblema];
     
@@ -64,6 +56,11 @@ UIButton *imagemCurtir;
     
     self.lblOrdenar.title = paramOrdenar;
     self.lblFiltrar.title = paramFiltrar;
+    
+    
+    [self.lblOrdenar setTintColor:[UIColor clearColor]];
+    [self.lblFiltrar setTintColor:[UIColor clearColor]];
+
     
     a = [[Area alloc] init];
     listaAreas = [a retornaAreasTodas];
@@ -178,12 +175,12 @@ UIButton *imagemCurtir;
                     listaProblema = [pa retornaProblemasAdaptadosTodos];
                     [self mudaContainerView:listaProblema];
                     paramFiltrar = param;
-                    NSLog(@"fuck3");
+                    //NSLog(@"fuck3");
                 }else if([[paramOrdenar lowercaseString] isEqualToString:@"mais curtidas"]){
                     listaProblema = [pa retornaProblemasAdaptadosTodosPorCurtida];
                     [self mudaContainerView:listaProblema];
                     paramFiltrar = param;
-                    NSLog(@"fuck2");
+                    //NSLog(@"fuck2");
                 }
                 
             }else{
@@ -191,13 +188,13 @@ UIButton *imagemCurtir;
                     listaProblema = [pa retornaTodosProblemasAdaptadosAreaUltimos:paramFiltrar];
                     [self mudaContainerView:listaProblema];
                     paramFiltrar = param;
-                    NSLog(@"fuck1");
+                    //NSLog(@"fuck1");
                     
                 }else if([[paramOrdenar lowercaseString]isEqualToString:@"mais curtidas"]){
                     listaProblema = [pa retornaTodosProblemasAdaptadosAreaCurtida:paramFiltrar];
                     [self mudaContainerView:listaProblema];
                     paramFiltrar = param;
-                    NSLog(@"fuck4");
+                    //NSLog(@"fuck4");
                     
                     
                 }

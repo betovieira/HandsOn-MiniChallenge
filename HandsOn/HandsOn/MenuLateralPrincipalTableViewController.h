@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UITableViewCell *cellPessoal;
 @property (strong, nonatomic) IBOutlet UITableViewCell *cellConfig;
 
+- (void) reiniciaMenuLateral;
 
 
 @end

@@ -17,5 +17,5 @@
 //@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnFiltrarArea;
 //- (IBAction)showFiltrarPorArea:(id)sender;
 
-
+//-(NSString*) makeRestAPICall : (NSString*) reqURLStr;
 @end

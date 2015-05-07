@@ -11,6 +11,7 @@
 @interface BancoDadosHelper : NSObject
 
 + (NSArray *) retornaDados:(NSString *)url;
+//+ (NSArray *) retornaDadosSolucoes:(NSString *)url_str;
 
 
 @end

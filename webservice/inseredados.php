@@ -44,11 +44,12 @@
 		$caminhoAnexoSolucao = $_POST['caminhoAnexoSolucao'];
 		$interesse = $_POST['interesse'];	
 		$id_area = $_POST['id_area']; 
+		$id_usuario = $_POST['id_usuario'];
 
 		$descricaoTotalSolucao = $_POST['descricaoTotalSolucao'];
 		$caminhoLink = $_POST['caminhoLink'];
 
-		$command = "INSERT INTO `solucao`(`id_solucao`, `id_problema`, `descricaoSolucao`, `descricaoTotalSolucao`,`caminhoLink`, `caminhoAnexoSolucao`, `interesse`, `curtidasSolucao`, `id_area`) VALUES (null,$id_problema,'$descricaoSolucao','$descricaoTotalSolucao','$caminhoLink' ,'$caminhoAnexoSolucao','$interesse',0, $id_area)";
+		$command = "INSERT INTO `solucao`(`id_solucao`, `id_problema`, `descricaoSolucao`, `descricaoTotalSolucao`,`caminhoLink`, `caminhoAnexoSolucao`, `interesse`, `curtidasSolucao`, `id_area`, `id_usuario`) VALUES (null,$id_problema,'$descricaoSolucao','$descricaoTotalSolucao','$caminhoLink' ,'$caminhoAnexoSolucao','$interesse',0, $id_area, $id_usuario)";
 		//echo $command;
 		echo insertMySQL($command);
 	} 
