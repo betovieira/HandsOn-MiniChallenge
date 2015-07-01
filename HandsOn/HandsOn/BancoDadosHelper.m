@@ -31,7 +31,9 @@ NSMutableURLRequest *request;
     ;
     //NSMutableString *responseString = [[NSMutableString alloc] initWithData:response encoding:NSUTF8StringEncoding];
     //NSLog(@"%@",responseString);
-    
+    if (response == nil){
+        return nil;
+    }
     NSArray *separaObjetos = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
     
     return separaObjetos;
