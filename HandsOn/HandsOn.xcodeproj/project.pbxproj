@@ -130,6 +130,8 @@
 		DBB60A0F1AFB865000921E35 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 		DBE8245E1AD59C7C006065D4 /* Usuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Usuario.h; sourceTree = "<group>"; };
 		DBE8245F1AD59C7C006065D4 /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Usuario.m; sourceTree = "<group>"; };
+		DBF8CD931B4444C50058A590 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		DBF8CD941B4444C50058A590 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,7 +361,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = DB1AF13C1AD46C04003F0283;
@@ -461,6 +462,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB1AF1531AD46C04003F0283 /* Base */,
+				DBF8CD931B4444C50058A590 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -469,6 +471,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB1AF1581AD46C04003F0283 /* Base */,
+				DBF8CD941B4444C50058A590 /* pt-BR */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -628,7 +631,7 @@
 				DB1AF1671AD46C05003F0283 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		DB1AF1681AD46C05003F0283 /* Build configuration list for PBXNativeTarget "HandsOn" */ = {
 			isa = XCConfigurationList;
@@ -637,7 +640,7 @@
 				DB1AF16A1AD46C05003F0283 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		DB1AF16B1AD46C05003F0283 /* Build configuration list for PBXNativeTarget "HandsOnTests" */ = {
 			isa = XCConfigurationList;
@@ -646,7 +649,7 @@
 				DB1AF16D1AD46C05003F0283 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

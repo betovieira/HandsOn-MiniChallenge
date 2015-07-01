@@ -37,7 +37,7 @@ UIButton *imagemCurtir;
     SolucoesTableViewController *solucoesView;
     
     listaSolucoes = [sa retornaSolucaoAdaptadosTodos];
-    solucoesView = [[SolucoesTableViewController alloc]initWithListaNova:listaSolucoes];
+    //solucoesView = [[SolucoesTableViewController alloc]initWithListaNova:listaSolucoes];
     
     solucoesView = [self.storyboard instantiateViewControllerWithIdentifier:@"viewSolucoes"];
     
@@ -81,7 +81,7 @@ UIButton *imagemCurtir;
 -(void) mudaContainerView:(NSMutableArray *)m
 {
     SolucoesTableViewController *solucoesView;
-    solucoesView = [[SolucoesTableViewController alloc] initWithListaNova:m];
+    //solucoesView = [[SolucoesTableViewController alloc] initWithListaNova:m];
     
     solucoesView = [self.storyboard instantiateViewControllerWithIdentifier:@"viewSolucoes"];
     

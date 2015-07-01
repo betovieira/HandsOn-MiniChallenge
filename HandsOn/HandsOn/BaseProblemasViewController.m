@@ -39,7 +39,7 @@ UIButton *imagemCurtir;
     
     listaProblema = [pa retornaProblemasAdaptadosTodos];
     
-    problemaView = [[ProblemasTableViewController alloc] initWithListaNova:listaProblema];
+    //problemaView = [[ProblemasTableViewController alloc] initWithListaNova:listaProblema];
     
     problemaView = [self.storyboard instantiateViewControllerWithIdentifier:@"viewProblemas"];
     problemaView.view.frame = self.containerView.frame;
@@ -89,7 +89,7 @@ UIButton *imagemCurtir;
 -(void) mudaContainerView:(NSMutableArray *)m
 {
     ProblemasTableViewController *problemaView;
-    problemaView = [[ProblemasTableViewController alloc] initWithListaNova:m];
+    //problemaView = [[ProblemasTableViewController alloc] initWithListaNova:m];
     
     problemaView = [self.storyboard instantiateViewControllerWithIdentifier:@"viewProblemas"];
     

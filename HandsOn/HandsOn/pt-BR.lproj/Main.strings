@@ -1,0 +1,276 @@
+
+/* Class = "UILabel"; text = "habilidade"; ObjectID = "0ez-ha-dvI"; */
+"0ez-ha-dvI.text" = "habilidade";
+
+/* Class = "UILabel"; text = "Titulo"; ObjectID = "1Hy-oo-A6g"; */
+"1Hy-oo-A6g.text" = "Titulo";
+
+/* Class = "UILabel"; text = "Solucoes"; ObjectID = "2Ae-UC-Urt"; */
+"2Ae-UC-Urt.text" = "Solucoes";
+
+/* Class = "UIBarButtonItem"; title = "Label"; ObjectID = "2hi-iA-41c"; */
+"2hi-iA-41c.title" = "Label";
+
+/* Class = "UILabel"; text = "Criador"; ObjectID = "3UC-PB-bAh"; */
+"3UC-PB-bAh.text" = "Criador";
+
+/* Class = "UILabel"; text = "Titulo"; ObjectID = "3Xt-xV-h5Q"; */
+"3Xt-xV-h5Q.text" = "Titulo";
+
+/* Class = "UILabel"; text = "Vídeo"; ObjectID = "3sr-2b-Yhk"; */
+"3sr-2b-Yhk.text" = "Vídeo";
+
+/* Class = "UILabel"; text = "Descrição"; ObjectID = "5NJ-1v-8U8"; */
+"5NJ-1v-8U8.text" = "Descrição";
+
+/* Class = "UILabel"; text = "Área"; ObjectID = "6LW-8Y-M2R"; */
+"6LW-8Y-M2R.text" = "Área";
+
+/* Class = "UIButton"; normalTitle = "NOVA SOLUÇÃO "; ObjectID = "6LW-Yv-PTZ"; */
+"6LW-Yv-PTZ.normalTitle" = "NOVA SOLUÇÃO ";
+
+/* Class = "UIBarButtonItem"; title = "Areas"; ObjectID = "7su-3T-sjh"; */
+"7su-3T-sjh.title" = "Areas";
+
+/* Class = "UILabel"; text = "Nome"; ObjectID = "8Qb-US-RGr"; */
+"8Qb-US-RGr.text" = "Nome";
+
+/* Class = "UILabel"; text = "Curso"; ObjectID = "8da-Jk-9sn"; */
+"8da-Jk-9sn.text" = "Curso";
+
+/* Class = "UITextField"; accessibilityLabel = "txtEmail"; ObjectID = "An8-cV-2sl"; */
+"An8-cV-2sl.accessibilityLabel" = "txtEmail";
+
+/* Class = "UITextField"; placeholder = "email"; ObjectID = "An8-cV-2sl"; */
+"An8-cV-2sl.placeholder" = "email";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "BJk-gW-259"; */
+"BJk-gW-259.text" = "Status";
+
+/* Class = "UIBarButtonItem"; title = "Ordenar por"; ObjectID = "Bzo-R6-LZF"; */
+"Bzo-R6-LZF.title" = "Ordenar por";
+
+/* Class = "UITextField"; placeholder = "curso"; ObjectID = "CnI-uo-vOp"; */
+"CnI-uo-vOp.placeholder" = "curso";
+
+/* Class = "UILabel"; text = "Curtidas"; ObjectID = "D4u-wk-eHT"; */
+"D4u-wk-eHT.text" = "Curtidas";
+
+/* Class = "UIButton"; normalTitle = "Entrar"; ObjectID = "DaM-It-BsT"; */
+"DaM-It-BsT.normalTitle" = "Entrar";
+
+/* Class = "UILabel"; text = "Título"; ObjectID = "FJ9-Da-avs"; */
+"FJ9-Da-avs.text" = "Título";
+
+/* Class = "UILabel"; text = "Area"; ObjectID = "FfG-re-mb8"; */
+"FfG-re-mb8.text" = "Area";
+
+/* Class = "UILabel"; text = "Forneça um link para um vídeo produido por você no youtube (opcional)"; ObjectID = "HMD-fA-fQj"; */
+"HMD-fA-fQj.text" = "Forneça um link para um vídeo produido por você no youtube (opcional)";
+
+/* Class = "UILabel"; text = "Em construção"; ObjectID = "IxY-IQ-Ao4"; */
+"IxY-IQ-Ao4.text" = "Em construção";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Izz-NX-JVr"; */
+"Izz-NX-JVr.text" = "Label";
+
+/* Class = "UILabel"; text = "Titulo"; ObjectID = "JBG-Y7-z56"; */
+"JBG-Y7-z56.text" = "Titulo";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "JPD-0B-TxK"; */
+"JPD-0B-TxK.title" = "Item";
+
+/* Class = "UITextField"; placeholder = "Confirmar Senha"; ObjectID = "JsD-TN-g7l"; */
+"JsD-TN-g7l.placeholder" = "Confirmar Senha";
+
+/* Class = "UILabel"; text = "Implementações"; ObjectID = "KHp-yV-d0x"; */
+"KHp-yV-d0x.text" = "Implementações";
+
+/* Class = "UILabel"; text = "habilidade"; ObjectID = "KYl-bv-xVG"; */
+"KYl-bv-xVG.text" = "habilidade";
+
+/* Class = "UILabel"; text = "Criador"; ObjectID = "KYx-yg-iWS"; */
+"KYx-yg-iWS.text" = "Criador";
+
+/* Class = "UILabel"; text = "Area"; ObjectID = "Kr8-Yh-KwO"; */
+"Kr8-Yh-KwO.text" = "Area";
+
+/* Class = "UILabel"; text = "Anexo"; ObjectID = "LiI-eU-brj"; */
+"LiI-eU-brj.text" = "Anexo";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "OVD-41-mjL"; */
+"OVD-41-mjL.text" = "Status";
+
+/* Class = "UINavigationItem"; title = "Root View Controller"; ObjectID = "P8p-RR-Dlr"; */
+"P8p-RR-Dlr.title" = "Root View Controller";
+
+/* Class = "UIBarButtonItem"; title = "Área de interesse"; ObjectID = "PYd-cw-4nM"; */
+"PYd-cw-4nM.title" = "Área de interesse";
+
+/* Class = "UILabel"; text = "Area"; ObjectID = "PhR-tQ-XP2"; */
+"PhR-tQ-XP2.text" = "Area";
+
+/* Class = "UILabel"; text = "Hands On"; ObjectID = "Pvs-Fl-bGn"; */
+"Pvs-Fl-bGn.text" = "Hands On";
+
+/* Class = "UILabel"; text = "Anexo"; ObjectID = "Qcp-ll-u7W"; */
+"Qcp-ll-u7W.text" = "Anexo";
+
+/* Class = "UITextField"; placeholder = "senha"; ObjectID = "RlJ-eN-Sr6"; */
+"RlJ-eN-Sr6.placeholder" = "senha";
+
+/* Class = "UIButton"; normalTitle = "Problemas"; ObjectID = "RrN-xU-2lL"; */
+"RrN-xU-2lL.normalTitle" = "Problemas";
+
+/* Class = "UITextField"; placeholder = "Nome"; ObjectID = "TJW-kI-uby"; */
+"TJW-kI-uby.placeholder" = "Nome";
+
+/* Class = "UILabel"; text = "Video"; ObjectID = "Uq7-Lc-8f3"; */
+"Uq7-Lc-8f3.text" = "Video";
+
+/* Class = "UILabel"; text = "Forneça um link para um documento produzido por você que detalhe a solução"; ObjectID = "Uvq-m8-MGg"; */
+"Uvq-m8-MGg.text" = "Forneça um link para um documento produzido por você que detalhe a solução";
+
+/* Class = "UILabel"; text = "Area"; ObjectID = "Vih-J6-YZg"; */
+"Vih-J6-YZg.text" = "Area";
+
+/* Class = "UILabel"; text = "Soluções com"; ObjectID = "Vj2-gE-t5j"; */
+"Vj2-gE-t5j.text" = "Soluções com";
+
+/* Class = "UILabel"; text = "separe suas habilidades por virgula"; ObjectID = "W4P-nD-u7s"; */
+"W4P-nD-u7s.text" = "separe suas habilidades por virgula";
+
+/* Class = "UILabel"; text = "Habilidades"; ObjectID = "WLd-rL-xv6"; */
+"WLd-rL-xv6.text" = "Habilidades";
+
+/* Class = "UILabel"; text = "Nova Solução"; ObjectID = "WYi-ug-E71"; */
+"WYi-ug-E71.text" = "Nova Solução";
+
+/* Class = "UITextField"; placeholder = "senha"; ObjectID = "Wfi-yI-HD4"; */
+"Wfi-yI-HD4.placeholder" = "senha";
+
+/* Class = "UILabel"; text = "Descrição"; ObjectID = "Xqw-HR-cIB"; */
+"Xqw-HR-cIB.text" = "Descrição";
+
+/* Class = "UILabel"; text = "suas habilidades"; ObjectID = "Y14-MX-eig"; */
+"Y14-MX-eig.text" = "suas habilidades";
+
+/* Class = "UILabel"; text = "Em Construção"; ObjectID = "Yff-WO-Z3b"; */
+"Yff-WO-Z3b.text" = "Em Construção";
+
+/* Class = "UITextField"; placeholder = "habilidades"; ObjectID = "Yg7-01-8U6"; */
+"Yg7-01-8U6.placeholder" = "habilidades";
+
+/* Class = "UILabel"; text = "Descrição"; ObjectID = "ZZ9-zm-NSr"; */
+"ZZ9-zm-NSr.text" = "Descrição";
+
+/* Class = "UILabel"; text = "Implementações"; ObjectID = "ZjJ-tb-J87"; */
+"ZjJ-tb-J87.text" = "Implementações";
+
+/* Class = "UITextField"; placeholder = "Curso"; ObjectID = "a5N-F1-bsd"; */
+"a5N-F1-bsd.placeholder" = "Curso";
+
+/* Class = "UILabel"; text = "Curtidas"; ObjectID = "anN-yO-C9M"; */
+"anN-yO-C9M.text" = "Curtidas";
+
+/* Class = "UILabel"; text = "Novo Problema"; ObjectID = "d3H-wc-EFA"; */
+"d3H-wc-EFA.text" = "Novo Problema";
+
+/* Class = "UILabel"; text = "Separe as habilidades nescessárias para implementar sua solução por vírgula"; ObjectID = "d3l-uz-hMO"; */
+"d3l-uz-hMO.text" = "Separe as habilidades nescessárias para implementar sua solução por vírgula";
+
+/* Class = "UIButton"; normalTitle = "Cadastrar-se"; ObjectID = "eRO-dc-neJ"; */
+"eRO-dc-neJ.normalTitle" = "Cadastrar-se";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "eTm-vZ-ZpF"; */
+"eTm-vZ-ZpF.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "Sair"; ObjectID = "et5-6p-TKx"; */
+"et5-6p-TKx.normalTitle" = "Sair";
+
+/* Class = "UIButton"; normalTitle = "Soluções"; ObjectID = "fOw-pi-pWM"; */
+"fOw-pi-pWM.normalTitle" = "Soluções";
+
+/* Class = "UILabel"; text = "Habilidades"; ObjectID = "fda-dW-DHH"; */
+"fda-dW-DHH.text" = "Habilidades";
+
+/* Class = "UIButton"; normalTitle = "Editar"; ObjectID = "ful-wx-bYA"; */
+"ful-wx-bYA.normalTitle" = "Editar";
+
+/* Class = "UITextField"; placeholder = "email"; ObjectID = "iHN-9a-bMt"; */
+"iHN-9a-bMt.placeholder" = "email";
+
+/* Class = "UILabel"; text = "Forneça um link para um vídeo produido por você no youtube (opcional)"; ObjectID = "jDH-t8-8uF"; */
+"jDH-t8-8uF.text" = "Forneça um link para um vídeo produido por você no youtube (opcional)";
+
+/* Class = "UILabel"; text = "Título"; ObjectID = "jdz-Su-Fs6"; */
+"jdz-Su-Fs6.text" = "Título";
+
+/* Class = "UIBarButtonItem"; title = "NOVA SOLUÇÃO"; ObjectID = "jj0-qe-mKd"; */
+"jj0-qe-mKd.title" = "NOVA SOLUÇÃO";
+
+/* Class = "UILabel"; text = "Titulo"; ObjectID = "kEW-Su-J8S"; */
+"kEW-Su-J8S.text" = "Titulo";
+
+/* Class = "UILabel"; text = "Cadastro não existente"; ObjectID = "lSf-Sd-fvy"; */
+"lSf-Sd-fvy.text" = "Cadastro não existente";
+
+/* Class = "UIButton"; normalTitle = "Implementações"; ObjectID = "nZN-AI-INV"; */
+"nZN-AI-INV.normalTitle" = "Implementações";
+
+/* Class = "UITextView"; text = "sdfasdfa"; ObjectID = "nmv-YZ-qEb"; */
+"nmv-YZ-qEb.text" = "sdfasdfa";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "npD-Xf-Q8H"; */
+"npD-Xf-Q8H.placeholder" = "Email";
+
+/* Class = "UIBarButtonItem"; title = "Area de interesse"; ObjectID = "oHa-CD-i51"; */
+"oHa-CD-i51.title" = "Area de interesse";
+
+/* Class = "UIBarButtonItem"; title = "Label"; ObjectID = "oTg-wp-CXH"; */
+"oTg-wp-CXH.title" = "Label";
+
+/* Class = "UITextField"; placeholder = "Senha"; ObjectID = "on5-Y6-4rt"; */
+"on5-Y6-4rt.placeholder" = "Senha";
+
+/* Class = "UIButton"; normalTitle = "Salvar"; ObjectID = "owh-DI-3Xa"; */
+"owh-DI-3Xa.normalTitle" = "Salvar";
+
+/* Class = "UILabel"; text = "Separe as habilidades nescessárias para implementar sua solução por vírgula"; ObjectID = "sSt-6e-38g"; */
+"sSt-6e-38g.text" = "Separe as habilidades nescessárias para implementar sua solução por vírgula";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "t4I-qR-c3h"; */
+"t4I-qR-c3h.title" = "Item";
+
+/* Class = "UILabel"; text = "Curtidas:"; ObjectID = "t6c-6b-szT"; */
+"t6c-6b-szT.text" = "Curtidas:";
+
+/* Class = "UITextField"; accessibilityLabel = "txtEmail"; ObjectID = "twe-BE-1G1"; */
+"twe-BE-1G1.accessibilityLabel" = "txtEmail";
+
+/* Class = "UITextField"; placeholder = "nome"; ObjectID = "twe-BE-1G1"; */
+"twe-BE-1G1.placeholder" = "nome";
+
+/* Class = "UINavigationItem"; title = "SOLUÇÕES"; ObjectID = "tyh-3Z-r5I"; */
+"tyh-3Z-r5I.title" = "SOLUÇÕES";
+
+/* Class = "UILabel"; text = "habilidade"; ObjectID = "uMn-aT-P76"; */
+"uMn-aT-P76.text" = "habilidade";
+
+/* Class = "UIBarButtonItem"; title = "Ordenar por"; ObjectID = "upM-vg-elV"; */
+"upM-vg-elV.title" = "Ordenar por";
+
+/* Class = "UILabel"; text = "(exemplo:  programação, design)"; ObjectID = "vhd-z7-GEq"; */
+"vhd-z7-GEq.text" = "(exemplo:  programação, design)";
+
+/* Class = "UILabel"; text = "Problemas"; ObjectID = "w5D-Dm-HkX"; */
+"w5D-Dm-HkX.text" = "Problemas";
+
+/* Class = "UITextField"; placeholder = "Habilidades"; ObjectID = "xIX-8V-ay5"; */
+"xIX-8V-ay5.placeholder" = "Habilidades";
+
+/* Class = "UIButton"; normalTitle = "Apagar Conta"; ObjectID = "ykv-K9-IUA"; */
+"ykv-K9-IUA.normalTitle" = "Apagar Conta";
+
+/* Class = "UIBarButtonItem"; title = "VOLTAR"; ObjectID = "z6f-bY-9u8"; */
+"z6f-bY-9u8.title" = "VOLTAR";
